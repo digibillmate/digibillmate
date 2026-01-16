@@ -32,11 +32,13 @@ body {
   object-fit: contain;
 }
 
+/* 🔥 FIX: text was invisible */
 .brand-text {
   text-align: center;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.3px;
+  color: white;              /* ← THIS is the fix */
 }
 
 /* ===== TEXT ===== */

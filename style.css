@@ -5,6 +5,7 @@ body {
   background: #f8fafc;
 }
 
+/* ===== HERO ===== */
 .hero {
   background: linear-gradient(135deg, #0f172a, #1e40af);
   color: white;
@@ -17,6 +18,19 @@ body {
   margin: auto;
 }
 
+/* ===== LOGO ===== */
+.logo-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.logo {
+  height: 48px;
+  width: auto;
+}
+
+/* ===== TEXT ===== */
 h1 {
   font-size: 48px;
   margin-bottom: 10px;
@@ -35,6 +49,7 @@ h1 {
   line-height: 1.6;
 }
 
+/* ===== BUTTONS ===== */
 .buttons {
   margin-top: 30px;
 }
@@ -58,6 +73,7 @@ h1 {
   color: #1e40af;
 }
 
+/* ===== SECTIONS ===== */
 .section {
   padding: 70px 20px;
   background: white;
@@ -87,6 +103,7 @@ h2 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
+/* ===== STEPS ===== */
 .steps {
   max-width: 600px;
   margin: auto;
@@ -97,6 +114,7 @@ h2 {
   margin: 15px 0;
 }
 
+/* ===== MISC ===== */
 .center {
   text-align: center;
   font-size: 18px;
@@ -107,4 +125,19 @@ footer {
   color: #cbd5f5;
   text-align: center;
   padding: 20px;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+  .hero {
+    padding: 60px 16px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  .tagline {
+    font-size: 20px;
+  }
 }

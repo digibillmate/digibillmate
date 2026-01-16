@@ -10,7 +10,6 @@ body {
   background: linear-gradient(135deg, #0f172a, #1e40af);
   color: white;
   padding: 80px 20px;
-  text-align: center;
 }
 
 .container {
@@ -18,10 +17,11 @@ body {
   margin: auto;
 }
 
-/* ===== LOGO ===== */
-.logo-wrap {
-  display: flex;
-  justify-content: center;
+/* ===== BRAND BAR ===== */
+.brand-bar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
   margin-bottom: 24px;
 }
 
@@ -32,17 +32,19 @@ body {
   object-fit: contain;
 }
 
-
-/* ===== TEXT ===== */
-h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+.brand-text {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
 }
 
+/* ===== TEXT ===== */
 .tagline {
   font-size: 22px;
   margin-bottom: 20px;
   color: #c7d2fe;
+  text-align: center;
 }
 
 .sub {
@@ -50,11 +52,13 @@ h1 {
   max-width: 700px;
   margin: auto;
   line-height: 1.6;
+  text-align: center;
 }
 
 /* ===== BUTTONS ===== */
 .buttons {
   margin-top: 30px;
+  text-align: center;
 }
 
 .btn {
@@ -117,7 +121,7 @@ h2 {
   margin: 15px 0;
 }
 
-/* ===== MISC ===== */
+/* ===== FOOTER ===== */
 .center {
   text-align: center;
   font-size: 18px;
@@ -132,15 +136,22 @@ footer {
 
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
-  .hero {
-    padding: 60px 16px;
+  .brand-bar {
+    grid-template-columns: auto;
+    gap: 12px;
+    text-align: center;
   }
 
   .logo {
-    height: 40px;
+    height: 96px;
+    margin: auto;
   }
 
-  .tagline {
-    font-size: 20px;
+  .brand-text {
+    text-align: center;
+  }
+
+  .hero {
+    padding: 60px 16px;
   }
 }

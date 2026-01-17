@@ -1,51 +1,43 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  color: #1e293b;
   background: #f8fafc;
+  color: #1e293b;
 }
 
 /* ===== HERO ===== */
 .hero {
   background: linear-gradient(135deg, #0f172a, #1e40af);
   color: white;
-  padding: 70px 20px;
+  padding: 80px 20px;
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
 }
 
+/* ===== HERO STACK ===== */
+.hero-stack {
+  text-align: center;
+}
+
 /* ===== BRAND ===== */
-.brand-bar {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-bottom: 40px;
-}
-
 .logo {
-  height: 76px;
-  width: auto;
-  object-fit: contain;
-}
-
-.brand-text-wrap {
-  display: flex;
-  flex-direction: column;
+  height: 84px;
+  margin-bottom: 16px;
 }
 
 .brand-text {
-  font-size: 36px;              /* ⬆ bigger */
+  font-size: 40px;
   font-weight: 700;
-  color: white;
+  margin: 0;
 }
 
 .brand-statement {
-  font-size: 16px;              /* ⬆ clearer */
+  font-size: 16px;
   color: #c7d2fe;
-  margin-top: 4px;
+  margin: 6px 0 24px;
 }
 
 /* ===== HERO TEXT ===== */
@@ -53,7 +45,6 @@ body {
   font-size: 24px;
   color: #c7d2fe;
   margin-bottom: 16px;
-  text-align: center;
 }
 
 .sub {
@@ -61,13 +52,11 @@ body {
   max-width: 760px;
   margin: auto;
   line-height: 1.6;
-  text-align: center;
 }
 
 /* ===== BUTTONS ===== */
 .buttons {
   margin-top: 30px;
-  text-align: center;
 }
 
 .btn {
@@ -141,17 +130,6 @@ h2 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* ===== STEPS ===== */
-.steps {
-  max-width: 600px;
-  margin: auto;
-  font-size: 18px;
-}
-
-.steps li {
-  margin: 14px 0;
-}
-
 /* ===== FOOTER ===== */
 .center {
   text-align: center;
@@ -167,21 +145,15 @@ footer {
 
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
-  .brand-bar {
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
   .logo {
-    height: 64px;
+    height: 68px;
   }
 
   .brand-text {
-    font-size: 30px;
+    font-size: 32px;
   }
 
   .hero {
-    padding: 56px 16px;
+    padding: 60px 16px;
   }
 }

@@ -271,3 +271,18 @@ footer {
   color: #444;
   font-size: 15px;
 }
+/* ---------- Demo Video Spacing Override ---------- */
+
+.demo-section {
+  padding-top: 20px;      /* tighter space above video section */
+  padding-bottom: 80px;   /* more space below video */
+}
+
+.demo-tagline {
+  margin-bottom: 16px;    /* pulls video closer to text */
+}
+
+.video-wrap {
+  margin-top: 0;
+}
+

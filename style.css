@@ -1,61 +1,53 @@
-/* ================= RESET ================= */
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
-  color: #0f172a;
-  background: #f8fafc;
-  line-height: 1.55;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: #222;
+  background: #fff;
 }
 
-/* ================= LAYOUT ================= */
+/* ---------- Layout ---------- */
+
 .container {
-  max-width: 1080px;
-  margin: auto;
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 0 20px;
 }
 
-/* ================= HERO ================= */
+/* ---------- Hero ---------- */
+
 .hero {
-  background:
-    radial-gradient(1200px 420px at top,
-      rgba(59,130,246,0.25),
-      transparent 60%),
-    linear-gradient(180deg, #0f172a 0%, #020617 100%);
-  color: white;
-  padding: 72px 0 56px;
+  background: linear-gradient(135deg, #0b1d3a, #1e3a8a);
+  color: #fff;
+  padding: 56px 0 48px;
 }
 
 .hero-stack {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 8px; /* 🔥 controlled spacing */
+  text-align: center;
 }
 
-/* ================= BRAND ================= */
+/* ---------- Brand ---------- */
+
 .brand-inline {
   display: flex;
+  flex-direction: row;      /* 🔥 inline always */
   align-items: center;
   justify-content: center;
   gap: 14px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .logo {
-  height: 52px;
-  width: auto;
-  object-fit: contain;
-}
-
-.brand-text-wrap {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
 }
 
 .brand-text {
@@ -64,186 +56,158 @@ body {
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  color: #ffffff; /* 🔥 clear white */
+  color: #ffffff;
 }
 
 .brand-statement {
-  margin: 4px 0 0;
+  margin: 2px 0 0;
   font-size: 14px;
   font-weight: 500;
-  color: rgba(255,255,255,0.78); /* 🔥 softer white */
-  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.78);
 }
 
-/* ================= HERO TEXT ================= */
+/* ---------- Hero Text ---------- */
+
 .tagline {
-  margin-top: 14px;
+  margin: 6px 0 0;
   font-size: 22px;
   font-weight: 500;
-  color: rgba(255,255,255,0.92); /* 🔥 high contrast */
-  text-align: center;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .sub {
+  margin: 4px auto 0;
   max-width: 720px;
-  margin: 6px auto 0;
   font-size: 16px;
-  color: rgba(255,255,255,0.82); /* 🔥 readable but gentle */
-  text-align: center;
+  color: rgba(255, 255, 255, 0.82);
 }
 
-/* ================= BUTTONS ================= */
+/* ---------- Buttons ---------- */
+
 .buttons {
-  margin-top: 18px;
-  display: flex;                /* 🔥 force centering */
-  justify-content: center;      /* 🔥 center buttons */
+  margin-top: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
 .btn {
-  display: inline-block;
   padding: 12px 22px;
-  margin: 8px;
-  border-radius: 10px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 15px;
   transition: all 0.2s ease;
 }
 
-.primary {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  color: white;
-  box-shadow: 0 10px 24px rgba(59,130,246,0.4);
+.btn.primary {
+  background: #3b82f6;
+  color: #fff;
 }
 
-.primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 14px 30px rgba(59,130,246,0.55);
+.btn.primary:hover {
+  background: #2563eb;
 }
 
-.secondary {
-  background: rgba(255,255,255,0.96);
-  color: #1e40af;
+.btn.secondary {
+  background: #fff;
+  color: #1e3a8a;
 }
 
-.secondary:hover {
-  background: white;
+.btn.secondary:hover {
+  background: #e5e7eb;
 }
 
-/* ================= SECTIONS ================= */
+/* ---------- Sections ---------- */
+
 .section {
-  padding: 64px 0;
-  background: white;
+  padding: 48px 0;
 }
 
 .section.light {
-  background: #f1f5f9;
+  background: #f8fafc;
 }
 
 h2 {
-  margin: 0 0 32px;
+  margin: 0 0 18px;
+  font-size: 28px;
   text-align: center;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
 }
 
-/* ================= VIDEO ================= */
+/* ---------- Video ---------- */
+
 .video-wrap {
-  max-width: 860px;
-  margin: auto;
+  max-width: 720px;
+  margin: 0 auto;
   aspect-ratio: 16 / 9;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 24px 60px rgba(15,23,42,0.25);
 }
 
 .video-wrap iframe {
   width: 100%;
   height: 100%;
-  border: 0;
+  border-radius: 12px;
 }
 
 .video-note {
-  max-width: 720px;
-  margin: 18px auto 0;
+  margin-top: 14px;
   text-align: center;
-  font-size: 15px;
-  color: #475569;
+  color: #555;
 }
 
-/* ================= GRID / CARDS ================= */
+/* ---------- Grid ---------- */
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
 }
 
 .card {
-  background: white;
-  padding: 22px;
-  border-radius: 16px;
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
   text-align: center;
-  font-size: 15px;
-  box-shadow:
-    0 8px 24px rgba(15,23,42,0.08),
-    inset 0 1px 0 rgba(255,255,255,0.6);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
 
-/* ================= STEPS ================= */
+/* ---------- Steps ---------- */
+
 .steps {
   max-width: 640px;
-  margin: auto;
+  margin: 0 auto;
   padding-left: 20px;
-  font-size: 16px;
 }
 
 .steps li {
-  margin: 14px 0;
+  margin-bottom: 10px;
 }
 
-/* ================= CENTER TEXT ================= */
+/* ---------- Helpers ---------- */
+
 .center {
-  max-width: 760px;
-  margin: auto;
   text-align: center;
-  font-size: 16px;
-  color: #334155;
+  max-width: 720px;
+  margin: 0 auto;
 }
 
-/* ================= FOOTER ================= */
+/* ---------- Footer ---------- */
+
 footer {
-  background: #020617;
-  color: #94a3b8;
   text-align: center;
   padding: 20px;
   font-size: 14px;
+  background: #0b1d3a;
+  color: #fff;
 }
 
-/* ================= MOBILE ================= */
-@media (max-width: 640px) {
-  .brand-inline {
-    gap: 12px;
-  }
+/* ---------- Mobile ---------- */
 
-  .logo {
-    height: 46px;
-  }
-
+@media (max-width: 600px) {
   .brand-text {
     font-size: 30px;
   }
 
   .tagline {
     font-size: 18px;
-  }
-
-  h2 {
-    font-size: 26px;
-  }
-
-  .hero {
-    padding: 60px 0 48px;
   }
 }

@@ -1,4 +1,3 @@
-/* ---------- Reset ---------- */
 * {
   box-sizing: border-box;
 }
@@ -30,7 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 8px; /* 🔥 controlled spacing */
   text-align: center;
 }
 
@@ -38,6 +37,7 @@ body {
 
 .brand-inline {
   display: flex;
+  flex-direction: row;      /* 🔥 inline always */
   align-items: center;
   justify-content: center;
   gap: 14px;
@@ -56,39 +56,36 @@ body {
   font-weight: 800;
   line-height: 1.05;
   letter-spacing: -0.02em;
-  color: #fff;
+  color: #ffffff;
 }
 
 .brand-statement {
   margin: 2px 0 0;
   font-size: 14px;
   font-weight: 500;
-  color: rgba(255,255,255,0.78);
+  color: rgba(255, 255, 255, 0.78);
 }
 
 /* ---------- Hero Text ---------- */
 
 .tagline {
-  margin: 8px auto 0;
+  margin: 6px 0 0;
   font-size: 22px;
   font-weight: 500;
-  color: rgba(255,255,255,0.92);
-  text-align: center;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .sub {
-  margin: 6px auto 0;
+  margin: 4px auto 0;
   max-width: 720px;
   font-size: 16px;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.82);
-  text-align: center;
+  color: rgba(255, 255, 255, 0.82);
 }
 
 /* ---------- Buttons ---------- */
 
 .buttons {
-  margin-top: 16px;
+  margin-top: 14px;
   display: flex;
   justify-content: center;
   gap: 14px;
@@ -134,34 +131,7 @@ body {
 h2 {
   margin: 0 0 18px;
   font-size: 28px;
-  font-weight: 600;
   text-align: center;
-  letter-spacing: -0.2px;
-}
-
-/* ---------- Text Helpers ---------- */
-
-.lead {
-  max-width: 760px;
-  margin: 0 auto 16px;
-  font-size: 16.5px;
-  line-height: 1.65;
-  color: #333;
-  text-align: center;
-}
-
-.note {
-  margin-top: 18px;
-  font-size: 15px;
-  line-height: 1.5;
-  color: #555;
-  text-align: center;
-}
-
-.center {
-  text-align: center;
-  max-width: 760px;
-  margin: 0 auto;
 }
 
 /* ---------- Video ---------- */
@@ -176,13 +146,17 @@ h2 {
   width: 100%;
   height: 100%;
   border-radius: 12px;
-  border: none;
+}
+
+.video-note {
+  margin-top: 14px;
+  text-align: center;
+  color: #555;
 }
 
 /* ---------- Grid ---------- */
 
 .grid {
-  margin-top: 28px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 16px;
@@ -190,40 +164,30 @@ h2 {
 
 .card {
   background: #fff;
-  padding: 18px 16px;
+  padding: 18px;
   border-radius: 12px;
   text-align: center;
-  font-size: 15px;
-  line-height: 1.45;
   box-shadow: 0 6px 18px rgba(0,0,0,0.05);
 }
 
-/* ---------- Modern Steps ---------- */
+/* ---------- Steps ---------- */
 
-.steps-modern {
+.steps {
+  max-width: 640px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.steps li {
+  margin-bottom: 10px;
+}
+
+/* ---------- Helpers ---------- */
+
+.center {
+  text-align: center;
   max-width: 720px;
-  margin: 32px auto 0;
-}
-
-.step {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-  margin-bottom: 18px;
-}
-
-.step span {
-  font-size: 13px;
-  font-weight: 600;
-  color: #999;
-  min-width: 32px;
-}
-
-.step p {
-  margin: 0;
-  font-size: 16px;
-  line-height: 1.55;
-  color: #333;
+  margin: 0 auto;
 }
 
 /* ---------- Footer ---------- */
@@ -245,13 +209,5 @@ footer {
 
   .tagline {
     font-size: 18px;
-  }
-
-  .lead {
-    font-size: 16px;
-  }
-
-  .step {
-    gap: 12px;
   }
 }

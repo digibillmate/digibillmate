@@ -285,4 +285,27 @@ footer {
 .video-wrap {
   margin-top: 0;
 }
+/* ---------- Tight Section Spacing (Text Sections) ---------- */
+
+.section {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+/* Reduce space after headings */
+.section h2 {
+  margin-bottom: 12px;
+}
+
+/* Tighten paragraph spacing */
+.section p {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  line-height: 1.55;
+}
+
+/* Extra-tight for consecutive paragraphs */
+.section p + p {
+  margin-top: 6px;
+}
 

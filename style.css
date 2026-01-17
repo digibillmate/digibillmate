@@ -1,4 +1,4 @@
-/* ---------------- RESET & BASE ---------------- */
+/* ================= RESET ================= */
 * {
   box-sizing: border-box;
 }
@@ -12,19 +12,21 @@ body {
   line-height: 1.55;
 }
 
-/* ---------------- LAYOUT ---------------- */
+/* ================= LAYOUT ================= */
 .container {
   max-width: 1080px;
   margin: auto;
   padding: 0 20px;
 }
 
-/* ---------------- HERO ---------------- */
+/* ================= HERO ================= */
 .hero {
   background:
-    radial-gradient(1200px 400px at top, rgba(59,130,246,0.18), transparent 60%),
+    radial-gradient(1200px 420px at top,
+      rgba(59,130,246,0.18),
+      transparent 60%),
     linear-gradient(180deg, #0f172a 0%, #020617 100%);
-  color: #fff;
+  color: white;
   padding: 72px 0 56px;
 }
 
@@ -32,43 +34,49 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 14px;
+  gap: 10px;
 }
 
-/* Brand inline (UNCHANGED STRUCTURE, only visuals) */
+/* ================= BRAND ================= */
 .brand-inline {
   display: flex;
   align-items: center;
-  gap: 16px;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 6px;
 }
 
 .logo {
-  height: 56px;
+  height: 52px;
   width: auto;
   object-fit: contain;
 }
 
 .brand-text-wrap {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .brand-text {
   margin: 0;
   font-size: 36px;
   font-weight: 800;
+  line-height: 1.05;
   letter-spacing: -0.02em;
 }
 
 .brand-statement {
   margin: 4px 0 0;
   font-size: 14px;
+  font-weight: 500;
   color: #c7d2fe;
   letter-spacing: 0.02em;
 }
 
-/* ---------------- HERO TEXT ---------------- */
+/* ================= HERO TEXT ================= */
 .tagline {
-  margin-top: 18px;
+  margin-top: 14px;
   font-size: 22px;
   font-weight: 500;
   color: #e0e7ff;
@@ -83,9 +91,9 @@ body {
   text-align: center;
 }
 
-/* ---------------- BUTTONS ---------------- */
+/* ================= BUTTONS ================= */
 .buttons {
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .btn {
@@ -101,7 +109,7 @@ body {
 
 .primary {
   background: linear-gradient(135deg, #3b82f6, #2563eb);
-  color: #fff;
+  color: white;
   box-shadow: 0 10px 24px rgba(59,130,246,0.35);
 }
 
@@ -116,13 +124,13 @@ body {
 }
 
 .secondary:hover {
-  background: #fff;
+  background: white;
 }
 
-/* ---------------- SECTIONS ---------------- */
+/* ================= SECTIONS ================= */
 .section {
   padding: 64px 0;
-  background: #fff;
+  background: white;
 }
 
 .section.light {
@@ -137,7 +145,7 @@ h2 {
   letter-spacing: -0.01em;
 }
 
-/* ---------------- VIDEO ---------------- */
+/* ================= VIDEO ================= */
 .video-wrap {
   max-width: 860px;
   margin: auto;
@@ -157,11 +165,11 @@ h2 {
   max-width: 720px;
   margin: 18px auto 0;
   text-align: center;
-  color: #475569;
   font-size: 15px;
+  color: #475569;
 }
 
-/* ---------------- GRID / CARDS ---------------- */
+/* ================= GRID / CARDS ================= */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -169,18 +177,17 @@ h2 {
 }
 
 .card {
-  background: #ffffff;
+  background: white;
   padding: 22px;
   border-radius: 16px;
   text-align: center;
   font-size: 15px;
-  color: #0f172a;
   box-shadow:
     0 8px 24px rgba(15,23,42,0.08),
     inset 0 1px 0 rgba(255,255,255,0.6);
 }
 
-/* ---------------- STEPS ---------------- */
+/* ================= STEPS ================= */
 .steps {
   max-width: 640px;
   margin: auto;
@@ -192,7 +199,7 @@ h2 {
   margin: 14px 0;
 }
 
-/* ---------------- CENTER TEXT ---------------- */
+/* ================= CENTER TEXT ================= */
 .center {
   max-width: 760px;
   margin: auto;
@@ -201,7 +208,7 @@ h2 {
   color: #334155;
 }
 
-/* ---------------- FOOTER ---------------- */
+/* ================= FOOTER ================= */
 footer {
   background: #020617;
   color: #94a3b8;
@@ -210,8 +217,16 @@ footer {
   font-size: 14px;
 }
 
-/* ---------------- RESPONSIVE ---------------- */
+/* ================= MOBILE ================= */
 @media (max-width: 640px) {
+  .brand-inline {
+    gap: 12px;
+  }
+
+  .logo {
+    height: 46px;
+  }
+
   .brand-text {
     font-size: 30px;
   }

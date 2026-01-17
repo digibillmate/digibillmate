@@ -68,7 +68,17 @@ body {
 
 /* ---------- Hero Text ---------- */
 
+/* Default tagline (used outside hero, eg: languages section) */
 .tagline {
+  margin: 0 auto;
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+  text-align: center;
+}
+
+/* Hero-only tagline (dark background) */
+.hero .tagline {
   margin: 6px 0 0;
   font-size: 22px;
   font-weight: 500;
@@ -207,7 +217,7 @@ footer {
     font-size: 30px;
   }
 
-  .tagline {
+  .hero .tagline {
     font-size: 18px;
   }
 }

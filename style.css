@@ -9,7 +9,7 @@ body {
 .hero {
   background: linear-gradient(135deg, #0f172a, #1e40af);
   color: white;
-  padding: 80px 20px;
+  padding: 72px 20px 60px; /* ⬅ reduced bottom */
 }
 
 .container {
@@ -26,7 +26,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 18px; /* ⬅ reduced */
 }
 
 .logo {
@@ -50,29 +50,29 @@ body {
   margin-top: 4px;
 }
 
-/* ===== HERO TEXT ===== */
+/* ===== HERO TEXT (TIGHTENED) ===== */
 .tagline {
   font-size: 24px;
   color: #c7d2fe;
-  margin-bottom: 16px;
+  margin: 12px 0 10px; /* ⬅ reduced top & bottom */
 }
 
 .sub {
   font-size: 17px;
   max-width: 760px;
-  margin: auto;
+  margin: 0 auto; /* ⬅ removed extra top space */
   line-height: 1.6;
 }
 
-/* ===== BUTTONS ===== */
+/* ===== BUTTONS (TIGHTENED) ===== */
 .buttons {
-  margin-top: 30px;
+  margin-top: 22px; /* ⬅ reduced */
 }
 
 .btn {
   display: inline-block;
   padding: 12px 26px;
-  margin: 10px;
+  margin: 8px; /* ⬅ reduced */
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
@@ -88,9 +88,10 @@ body {
   color: #1e40af;
 }
 
-/* ===== VIDEO ===== */
+/* ===== SECTIONS ===== */
 .section {
   padding: 60px 20px;
+  background: white;
 }
 
 .section.light {
@@ -99,10 +100,11 @@ body {
 
 h2 {
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 26px;
   color: #0f172a;
 }
 
+/* ===== VIDEO ===== */
 .video-wrap {
   max-width: 820px;
   margin: auto;
@@ -120,10 +122,41 @@ h2 {
   font-size: 16px;
   color: #475569;
   max-width: 720px;
-  margin: 20px auto 0;
+  margin: 18px auto 0;
+}
+
+/* ===== GRID ===== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+/* ===== STEPS ===== */
+.steps {
+  max-width: 600px;
+  margin: auto;
+  font-size: 18px;
+}
+
+.steps li {
+  margin: 14px 0;
 }
 
 /* ===== FOOTER ===== */
+.center {
+  text-align: center;
+  font-size: 18px;
+}
+
 footer {
   background: #0f172a;
   color: #cbd5f5;
@@ -151,6 +184,6 @@ footer {
   }
 
   .hero {
-    padding: 60px 16px;
+    padding: 60px 16px 48px;
   }
 }

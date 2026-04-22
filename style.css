@@ -4,308 +4,429 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  color: #222;
-  background: #fff;
-}
-
-/* ---------- Layout ---------- */
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* ---------- Hero ---------- */
-
-.hero {
-  background: linear-gradient(135deg, #0b1d3a, #1e3a8a);
+  font-family: system-ui;
+  background: #0f172a;
   color: #fff;
-  padding: 56px 0 48px;
 }
 
-.hero-stack {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  text-align: center;
+/* NAVBAR */
+.nav {
+  background: #fff;
+  padding: 14px 0;
+  border-bottom: 1px solid #eee;
 }
 
-/* ---------- Brand ---------- */
-
-.brand-inline {
+.nav-flex {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  gap: 14px;
-  margin-bottom: 4px;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #111;
+  font-weight: 600;
 }
 
 .logo {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
+  width: 36px;
 }
 
-.brand-text {
-  margin: 0;
-  font-size: 36px;
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: -0.02em;
-  color: #ffffff;
-}
-
-.brand-statement {
-  margin: 2px 0 0;
-  font-size: 14px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.78);
-}
-
-/* ---------- Hero Text ---------- */
-
-.tagline {
-  margin: 0 auto;
-  font-size: 16px;
-  font-weight: 500;
-  color: #444;
-  text-align: center;
-}
-
-.hero .tagline {
-  margin: 6px 0 0;
-  font-size: 22px;
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.92);
-}
-
-.sub {
-  margin: 4px auto 0;
-  max-width: 720px;
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.82);
-}
-
-/* ---------- Buttons ---------- */
-
-.buttons {
-  margin-top: 14px;
+/* NAV LINKS */
+.nav-links {
   display: flex;
-  justify-content: center;
-  gap: 14px;
-  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.btn {
-  padding: 12px 22px;
-  border-radius: 8px;
+.nav-links a {
   text-decoration: none;
-  font-weight: 600;
-  transition: all 0.2s ease;
+  color: #333;
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
 }
 
-.btn.primary {
+/* 🔥 HOVER EFFECT (BUTTON STYLE) */
+.nav-links a:hover {
   background: #3b82f6;
   color: #fff;
 }
 
-.btn.primary:hover {
-  background: #2563eb;
+/* ACTIVE LINK (optional) */
+.nav-links a.active {
+  background: #3b82f6;
+  color: #fff;
 }
 
-.btn.secondary {
+/* RIGHT BUTTON */
+.nav .primary.small {
+  padding: 8px 14px;
+}
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #0b1d3a, #2563eb);
+  padding: 90px 0;
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.hero-grid {
+  display: grid;
+  gap: 50px;
+}
+
+@media (min-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+}
+
+.hero-left {
+  max-width: 520px;
+}
+
+.badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.hero-left h1 {
+  font-size: 46px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.hero-left span {
+  color: #60a5fa;
+}
+
+.hero-left p {
+  font-size: 16px;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+/* BUSINESS GRID */
+.business-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .business-grid {
+    grid-template-columns: repeat(7, 1fr);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* CARD */
+.business-card {
+  background: #fff;
+  padding: 18px 10px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: 0.25s;
+}
+
+.business-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ICON */
+.business-card .icon {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+/* TEXT */
+.business-card p {
+  font-size: 13px;
+  color: #111;
+}
+
+/* NOTE */
+.note {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* BUTTONS */
+.buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.primary {
+  background: #3b82f6;
+  color: #fff;
+}
+
+.secondary {
   background: #fff;
   color: #1e3a8a;
 }
 
-.btn.secondary:hover {
-  background: #e5e7eb;
+.outline {
+  border: 2px solid #fff;
+  color: #fff;
+  margin-top: 10px;
 }
 
-/* ---------- Sections ---------- */
-
-.section {
-  padding: 48px 0;
+.small {
+  padding: 8px 14px;
+  font-size: 14px;
 }
 
-.section.light {
-  background: #f8fafc;
+/* IMAGE */
+.hero-right {
+  display: flex;
+  justify-content: center;
 }
 
-h2 {
-  margin: 0 0 18px;
-  font-size: 28px;
-  text-align: center;
+.img-card {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
 }
 
-/* ---------- Video ---------- */
-
-.video-wrap {
-  max-width: 720px;
-  margin: 0 auto;
-  aspect-ratio: 16 / 9;
-}
-
-.video-wrap iframe {
+.hero-img {
   width: 100%;
-  height: 100%;
-  border-radius: 12px;
+  max-width: 320px;
 }
 
-.video-note {
-  margin-top: 14px;
+/* SECTION */
+.section {
+  padding: 60px 0;
+}
+
+.light {
+  background: #f8fafc;
+  color: #111;
+}
+
+.center {
   text-align: center;
-  color: #555;
 }
 
-/* ---------- Grid ---------- */
-
+/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .card {
   background: #fff;
-  padding: 18px;
+  color: #111;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+/* VIDEO */
+.video iframe {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+}
+
+/* FEATURES */
+.grid-4 {
+  display: grid;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.feature {
+  background: #e2e8f0;
+  padding: 20px;
+  border-radius: 10px;
+  color: #111;
+}
+
+/* STEP SECTION */
+.section-tag {
+  color: #3b82f6;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* STEPS LAYOUT */
+.steps {
+  position: relative;
+  display: grid;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+@media (min-width: 900px) {
+  .steps {
+    grid-template-columns: repeat(5, 1fr);
+    align-items: start;
+  }
+}
+
+/* CONNECTING LINE */
+.steps::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 5%;
+  width: 90%;
+  height: 2px;
+  background: #cbd5f5;
+  z-index: 0;
+}
+
+@media (max-width: 900px) {
+  .steps::before {
+    display: none;
+  }
+}
+
+/* STEP CARD */
+.step {
+  position: relative;
+  background: #fff;
+  padding: 20px 16px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  z-index: 1;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
 }
 
-/* ---------- Flow (ONLY BULLETS ADDED) ---------- */
-
-.flow {
-  max-width: 760px;
-  margin: 0 auto;
+.step:hover {
+  transform: translateY(-5px);
 }
 
-.flow p {
-  position: relative;
-  padding-left: 22px;
-  margin: 0 0 14px;
-  font-size: 16px;
-  line-height: 1.65;
-  color: #333;
-  text-align: center;
+/* STEP NUMBER CIRCLE */
+.step-circle {
+  width: 50px;
+  height: 50px;
+  background: #3b82f6;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: -40px auto 10px;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 5px 15px rgba(59,130,246,0.4);
 }
 
-.flow p::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 20px;
-  line-height: 1;
-  color: #3b82f6;
+/* TEXT */
+.step h4 {
+  margin: 10px 0 5px;
+  font-size: 15px;
+  color: #111;
 }
 
-/* ---------- Helpers ---------- */
-
-.center {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto;
+.step p {
+  font-size: 13px;
+  color: #555;
 }
 
-/* ---------- Footer ---------- */
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  padding: 40px 0;
+}
 
+.cta-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  font-size: 14px;
   background: #0b1d3a;
-  color: #fff;
 }
 
-/* ---------- Mobile ---------- */
-
-@media (max-width: 600px) {
-  .brand-text {
-    font-size: 30px;
-  }
-
-  .hero .tagline {
-    font-size: 18px;
-  }
+/* HERO LEFT ALIGNMENT FIX */
+.hero-left {
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 🔥 forces proper left alignment */
 }
 
-/* ---------- How it Works (Clean Bullet Flow) ---------- */
-
-.flow {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0;
+/* BUTTON GROUP FIX */
+.buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.flow p {
-  position: relative;
-  padding-left: 28px;
-  margin: 18px 0;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #222;
-  text-align: left; /* 🔥 key fix */
+/* REQUEST DEMO BUTTON FIX */
+.hero-left .outline {
+  margin-top: 10px;
+  align-self: flex-start; /* 🔥 prevents shifting */
 }
 
-/* Bullet */
-.flow p::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  top: 2px;
-  font-size: 22px;
-  line-height: 1;
-  color: #3b82f6; /* DigiBillMate blue */
+/* META TEXT ALIGNMENT FIX */
+.meta {
+  margin-top: 12px;
+  font-size: 14px;
+  opacity: 0.85;
+  line-height: 1.5;
 }
 
-/* Final note below bullets */
-.flow + .note {
-  margin-top: 28px;
-  text-align: center;
-  color: #444;
-  font-size: 15px;
-}
-/* ---------- Demo Video Spacing Override ---------- */
-
-.demo-section {
-  padding-top: 20px;      /* tighter space above video section */
-  padding-bottom: 80px;   /* more space below video */
+/* HERO RIGHT PERFECT CENTER */
+.hero-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.demo-tagline {
-  margin-bottom: 16px;    /* pulls video closer to text */
+/* IMAGE CARD CENTERING */
+.img-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.video-wrap {
-  margin-top: 0;
-}
-/* ---------- Tight Section Spacing (Text Sections) ---------- */
-
-.section {
-  padding-top: 36px;
-  padding-bottom: 36px;
-}
-
-/* Reduce space after headings */
-.section h2 {
-  margin-bottom: 12px;
-}
-
-/* Tighten paragraph spacing */
-.section p {
-  margin-top: 8px;
-  margin-bottom: 8px;
-  line-height: 1.55;
-}
-
-/* Extra-tight for consecutive paragraphs */
-.section p + p {
-  margin-top: 6px;
-}
-

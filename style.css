@@ -433,13 +433,12 @@ footer {
 /* MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
 
-  /* NAVBAR STACK */
+  /* NAVBAR */
   .nav-flex {
     flex-direction: column;
     gap: 10px;
   }
 
-  /* LOGO SIZE FIX */
   .logo {
     width: 28px;
   }
@@ -448,7 +447,6 @@ footer {
     font-size: 16px;
   }
 
-  /* NAV LINKS */
   .nav-links {
     flex-wrap: wrap;
     justify-content: center;
@@ -460,30 +458,47 @@ footer {
     padding: 6px 10px;
   }
 
-  /* HERO TEXT */
-  .hero-left h1 {
-    font-size: 28px;
+  /* HERO LAYOUT FIX */
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero-left {
+    align-items: center;
     text-align: center;
+  }
+
+  .hero-left h1 {
+    font-size: 26px;
   }
 
   .hero-left p {
     text-align: center;
   }
 
-  /* CENTER HERO CONTENT */
-  .hero-left {
-    align-items: center;
-    text-align: center;
-  }
-
-  /* BUTTONS CENTER */
   .buttons {
     justify-content: center;
   }
 
-  /* IMAGE SIZE FIX */
+  /* 🔥 MAIN FIX (IMPORTANT) */
+  .hero-right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden; /* prevents logo overflow */
+  }
+
+  .img-card {
+    max-width: 240px;   /* control container */
+    padding: 10px;
+  }
+
   .hero-img {
-    max-width: 220px;
+    width: 100%;
+    max-width: 180px;   /* smaller logo */
+    height: auto;
+    object-fit: contain;
   }
 
   /* HERO SPACING */

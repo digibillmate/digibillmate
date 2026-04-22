@@ -430,3 +430,64 @@ footer {
   justify-content: center;
   align-items: center;
 }
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+
+  /* NAVBAR STACK */
+  .nav-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* LOGO SIZE FIX */
+  .logo {
+    width: 28px;
+  }
+
+  .logo-wrap span {
+    font-size: 16px;
+  }
+
+  /* NAV LINKS */
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+
+  /* HERO TEXT */
+  .hero-left h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .hero-left p {
+    text-align: center;
+  }
+
+  /* CENTER HERO CONTENT */
+  .hero-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* BUTTONS CENTER */
+  .buttons {
+    justify-content: center;
+  }
+
+  /* IMAGE SIZE FIX */
+  .hero-img {
+    max-width: 220px;
+  }
+
+  /* HERO SPACING */
+  .hero {
+    padding: 60px 0;
+  }
+}

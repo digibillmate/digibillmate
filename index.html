@@ -10,14 +10,13 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="nav">
+<nav class="navbar">
   <div class="container nav-flex">
 
-    <div class="logo-wrap">
-      <img src="logo.png" class="logo">
-      <span>DigiBillMate</span>
-    </div>
+    <!-- TEXT LOGO -->
+    <div class="logo-text">DigiBillMate</div>
 
+    <!-- NAV LINKS -->
     <div class="nav-links">
       <a href="#products">Products</a>
       <a href="#demo">Demo</a>
@@ -25,12 +24,11 @@
       <a href="#contact">Contact</a>
     </div>
 
-    <a href="https://drive.google.com/file/d/148RlQZR0cYQY27bZp60gQsjTuGRhhvo-/view?usp=sharing"
-       target="_blank" class="btn primary small">Download CRM</a>
+    <!-- BUTTON -->
+    <a href="#" class="btn primary nav-btn">Download CRM</a>
 
   </div>
 </nav>
-
 <!-- HERO -->
 <section class="hero">
   <div class="container hero-grid">
@@ -50,7 +48,7 @@
 
       <div class="buttons">
         <a href="https://drive.google.com/file/d/148RlQZR0cYQY27bZp60gQsjTuGRhhvo-/view?usp=sharing"
-           target="_blank" class="btn primary">Download CRM</a>
+           target="_blank" class="btn primary">Download CRM For Desktop</a>
 
         <a href="https://digibillmatecrm-api.billmate-helper.workers.dev/"
            target="_blank" class="btn secondary">Use on Mobile</a>
@@ -65,7 +63,7 @@
 
     <div class="hero-right">
       <div class="img-card">
-        <img src="logo.png" class="hero-img">
+        <img src="hero-image.png" class="hero-main">
       </div>
     </div>
 
@@ -91,87 +89,30 @@
   </div>
 </section>
 
-<!-- DEMO -->
+<!--DEMO-->
 <section class="section light" id="demo">
   <div class="container hero-grid">
 
     <!-- LEFT -->
-    <div class="demo-left">
-      <p class="section-tag">SEE IT IN ACTION</p>
+    <div>
       <h2>How DigiBillMate Works</h2>
-
-      <p>Watch how bills are converted instantly into digital invoices.</p>
+      <p>Watch how bills are converted instantly.</p>
 
       <a href="https://www.youtube.com/watch?v=kskBxy_2tTk"
          target="_blank" class="btn primary">
-        ▶ Watch on YouTube
+        ▶ Watch Demo
       </a>
     </div>
 
-    <!-- RIGHT (VIDEO CARD INSTEAD OF IFRAME) -->
+    <!-- RIGHT -->
     <div class="video-card">
       <a href="https://www.youtube.com/watch?v=kskBxy_2tTk" target="_blank">
         
-        <img src="home.png" alt="Demo Thumbnail" class="hero-img">
-
-        <div class="play-button">▶</div>
+        <img src="https://img.youtube.com/vi/kskBxy_2tTk/hqdefault.jpg" class="video-thumb">
+        <div class="play-btn">▶</div>
 
       </a>
     </div>
-
-  </div>
-</section>
-
-<!-- WHO IS IT FOR -->
-<section class="section light">
-  <div class="container center">
-
-    <p class="section-tag">WHO IS DIGIBILLMATE FOR?</p>
-    <h2>Built for Every Business That Bills</h2>
-
-    <div class="business-grid">
-
-      <div class="business-card">
-        <div class="icon">🛒</div>
-        <p>Retail Stores</p>
-      </div>
-
-      <div class="business-card">
-        <div class="icon">🏪</div>
-        <p>Supermarkets</p>
-      </div>
-
-      <div class="business-card">
-        <div class="icon">💊</div>
-        <p>Pharmacies</p>
-      </div>
-
-      <div class="business-card">
-        <div class="icon">🍴</div>
-        <p>Restaurants</p>
-      </div>
-
-      <div class="business-card">
-        <div class="icon">🛠️</div>
-        <p>Service Centers</p>
-      </div>
-
-      <div class="business-card">
-        <div class="icon">🏥</div>
-        <p>Clinics</p>
-      </div>
-
-      <div class="business-card">
-        <div class="icon">⋯</div>
-        <p>And More</p>
-      </div>
-
-    </div>
-
-    <p class="note">
-      Especially suited for high-volume environments where speed, reliability,
-      and zero disruption matter.
-    </p>
 
   </div>
 </section>
@@ -189,7 +130,59 @@
     </div>
   </div>
 </section>
+<!--For whom-->
+<section class="section light">
+  <div class="container center">
 
+    <p class="section-tag">WHO IS DIGIBILLMATE FOR?</p>
+    <h2>Built for Every Business That Bills</h2>
+
+    <div class="business-grid">
+
+      <div class="business-card">
+        <span>🛒</span>
+        <p>Retail Stores</p>
+      </div>
+
+      <div class="business-card">
+        <span>🏪</span>
+        <p>Supermarkets</p>
+      </div>
+
+      <div class="business-card">
+        <span>💊</span>
+        <p>Pharmacies</p>
+      </div>
+
+      <div class="business-card">
+        <span>🍽️</span>
+        <p>Restaurants</p>
+      </div>
+
+      <div class="business-card">
+        <span>🛠️</span>
+        <p>Service Centers</p>
+      </div>
+
+      <div class="business-card">
+        <span>🏥</span>
+        <p>Clinics</p>
+      </div>
+
+      <div class="business-card">
+        <span>⋯</span>
+        <p>And More</p>
+      </div>
+
+    </div>
+
+    <p class="business-note">
+      Especially suited for high-volume environments where speed, reliability,
+      and zero disruption matter.
+    </p>
+
+  </div>
+</section>
 <!-- HOW IT WORKS -->
 <section class="section light">
   <div class="container center">
@@ -266,6 +259,7 @@
 
 </body>
 </html>
+
 <script>
   const links = document.querySelectorAll('.nav-links a');
   links.forEach(link => {

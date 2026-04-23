@@ -109,11 +109,24 @@ body {
   display: block;
   margin: auto;
 }
-/* DEMO FIX */
+
+/* DEMO FIX FINAL */
+#demo {
+  background: #f1f5f9;
+}
+
+#demo .container {
+  align-items: center;
+}
+
+.demo-left {
+  max-width: 420px;
+}
+
 .demo-left h2 {
-  position: relative;
   font-size: 20px;
   margin-bottom: 10px;
+  position: relative;
 }
 
 .demo-left h2::after {
@@ -128,14 +141,24 @@ body {
 
 .demo-left p {
   font-size: 14px;
-  color: #555;
-  margin: 15px 0;
+  color: #444;
+  margin: 14px 0;
 }
 
+/* IMPORTANT — FIX DISABLED BUTTON */
+.demo-left .btn {
+  background: #fff;
+  color: #2563eb;
+  border: 1px solid #2563eb;
+  opacity: 1 !important;   /* 🔥 fixes faded issue */
+}
+
+/* VIDEO */
 .video-card {
+  max-width: 420px;
   border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
 }
 /* FLOAT ICONS */
 .hero-icon {
@@ -206,55 +229,54 @@ body {
 
 .center { text-align:center; }
 
-/* PRODUCTS FIX */
-.section.light {
-  background: #f1f5f9;
-}
-
+/* PRODUCTS FINAL FIX */
 .grid {
-  gap: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  max-width: 900px;
+  margin: 30px auto 0;
 }
 
 .product-card {
   display: flex;
   align-items: center;
-  gap: 18px;
-  text-align: left;
-  padding: 20px 22px;
+  justify-content: space-between;
+  padding: 18px 22px;
   border-radius: 14px;
-  border: 1px solid #e2e8f0;
-  background: #fff;
-  transition: 0.25s;
+  background: #f8fafc;
+  border: 1px solid #e5e7eb;
 }
 
-.product-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+.product-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .product-card .icon {
-  font-size: 38px;
-  background: #eef2ff;
-  padding: 14px;
+  font-size: 34px;
+  background: #e0e7ff;
+  padding: 12px;
   border-radius: 50%;
 }
 
-.product-card h3 {
+.product-text h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   color: #111;
 }
 
-.product-card p {
-  margin: 6px 0;
-  font-size: 14px;
+.product-text p {
+  margin: 4px 0 0;
+  font-size: 13px;
   color: #555;
 }
 
 .product-card a {
-  font-size: 14px;
-  color: #2563eb;
+  font-size: 13px;
   font-weight: 600;
+  color: #2563eb;
 }
 /* GRID */
 .grid {

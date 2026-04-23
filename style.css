@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DigiBillMate</title>
-
-<style>
-
 /* RESET */
 * { box-sizing: border-box; }
 body {
@@ -29,7 +20,7 @@ body {
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(10px);
-  background: rgba(15,23,42,0.7);
+  background: rgba(15,23,42,0.75);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
@@ -54,7 +45,7 @@ body {
 }
 
 .nav-links a {
-  color: #dbeafe;
+  color: #c7d2fe;
   text-decoration: none;
   font-size: 14px;
   padding: 6px 10px;
@@ -65,13 +56,12 @@ body {
   background: #2563eb;
 }
 
-/* BUTTONS */
+/* BUTTON */
 .btn {
   padding: 10px 18px;
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
-  display: inline-block;
   transition: 0.2s;
 }
 
@@ -81,13 +71,9 @@ body {
   box-shadow: 0 8px 20px rgba(59,130,246,0.3);
 }
 
-.primary:hover {
-  transform: translateY(-2px);
-}
-
-.secondary {
-  background: #fff;
-  color: #1e3a8a;
+.outline {
+  border: 1px solid #fff;
+  color: #fff;
 }
 
 /* HERO */
@@ -108,25 +94,67 @@ body {
   }
 }
 
+/* HERO CARD */
+.hero-card {
+  position: relative;
+  background: linear-gradient(145deg,#1e3a8a,#2563eb);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+}
+
+.hero-main {
+  width: 100%;
+  max-width: 320px;
+  display: block;
+  margin: auto;
+}
+
+/* FLOAT ICONS */
+.hero-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+.whatsapp { top: 10px; left: 10px; background:#22c55e; }
+.sms { top: 10px; right: 10px; background:#3b82f6; }
+.cloud { bottom: 60px; left: 10px; background:#8b5cf6; }
+.lock { bottom: 60px; right: 10px; background:#f59e0b; }
+
+/* FEATURE PILLS */
+.hero-features {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.hero-features div {
+  background: rgba(255,255,255,0.1);
+  padding: 6px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* HERO TEXT */
 .hero-left h1 {
   font-size: 42px;
-  line-height: 1.2;
   margin: 15px 0;
 }
 
-.hero-left span {
-  color:#60a5fa;
-}
+.hero-left span { color:#60a5fa; }
 
 .badge {
   background: rgba(255,255,255,0.1);
   padding: 6px 14px;
   border-radius: 20px;
   font-size: 12px;
-}
-
-.hero-left p {
-  opacity: 0.85;
 }
 
 .buttons {
@@ -141,29 +169,37 @@ body {
   opacity: 0.7;
 }
 
-.hero-right img {
-  max-width: 380px;
-}
-
 /* SECTION */
-.section {
-  padding: 60px 0;
-}
+.section { padding: 60px 0; }
 
 .light {
   background: #f8fafc;
   color: #111;
 }
 
-.center {
-  text-align: center;
+.center { text-align:center; }
+
+/* PRODUCT */
+.product-card {
+  text-align:center;
 }
 
-/* PRODUCT CARDS */
+.product-card .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.product-card a {
+  color:#2563eb;
+  font-weight:600;
+  text-decoration:none;
+}
+
+/* GRID */
 .grid {
-  display: grid;
-  gap: 24px;
-  margin-top: 30px;
+  display:grid;
+  gap:24px;
+  margin-top:30px;
 }
 
 @media(min-width:768px){
@@ -173,17 +209,35 @@ body {
 }
 
 .card {
-  background: #fff;
-  padding: 24px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  background:#fff;
+  padding:24px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.05);
 }
 
 /* VIDEO */
 .video-card {
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+  position:relative;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 15px 40px rgba(0,0,0,0.2);
+}
+
+.video-thumb { width:100%; }
+
+.play-btn {
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:red;
+  color:#fff;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 /* FEATURES */
@@ -203,7 +257,7 @@ body {
   background:#fff;
   padding:18px;
   border-radius:14px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  box-shadow:0 6px 15px rgba(0,0,0,0.05);
 }
 
 /* CTA */
@@ -216,129 +270,25 @@ body {
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background: rgba(255,255,255,0.05);
-  padding: 20px 25px;
-  border-radius: 14px;
+  background: rgba(255,255,255,0.08);
+  padding:20px 25px;
+  border-radius:14px;
 }
 
 /* FOOTER */
-footer {
-  background:#0b1d3a;
-  text-align:center;
-  padding:20px;
-  opacity:0.8;
+.footer {
+  background:#020617;
+  padding:40px 0;
 }
 
-</style>
-</head>
+.footer-grid {
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  gap:20px;
+}
 
-<body>
-
-<nav class="navbar">
-  <div class="container nav-flex">
-    <div class="logo-text">DigiBillMate</div>
-
-    <div class="nav-links">
-      <a href="#products">Products</a>
-      <a href="#features">Features</a>
-      <a href="#demo">Demo</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <a href="/app" class="btn primary">Get Started Free</a>
-  </div>
-</nav>
-
-<section class="hero">
-  <div class="container hero-grid">
-
-    <div class="hero-left">
-      <span class="badge">Smart Billing. Stronger Business.</span>
-
-      <h1>Smart Software Solutions for <span>Modern Billing</span> Businesses</h1>
-
-      <p>DigiBillMate simplifies billing, communication and operations.</p>
-
-      <div class="buttons">
-        <a href="/app" class="btn primary">Get Started Free</a>
-        <a href="https://www.youtube.com/watch?v=kskBxy_2tTk" target="_blank" class="btn secondary">Watch Demo</a>
-      </div>
-
-      <div class="meta">✔ Works on All Devices ✔ Secure ✔ Fast ✔ No Paper Waste</div>
-    </div>
-
-    <div class="hero-right">
-      <img src="hero-image.png">
-    </div>
-
-  </div>
-</section>
-
-<section class="section light" id="products">
-  <div class="container center">
-    <h2>Our Products</h2>
-
-    <div class="grid">
-      <div class="card">
-        <h3>DigiBillMate</h3>
-        <p>Convert paper bills into digital invoices via WhatsApp & SMS.</p>
-      </div>
-
-      <div class="card">
-        <h3>DigiBillMate CRM</h3>
-        <p>Manage customers, service history and workflows efficiently.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="demo">
-  <div class="container hero-grid">
-
-    <div>
-      <h2>See DigiBillMate in Action</h2>
-      <p>Watch how bills are converted instantly.</p>
-
-      <a href="https://www.youtube.com/watch?v=kskBxy_2tTk" target="_blank" class="btn primary">Watch Demo</a>
-    </div>
-
-    <div class="video-card">
-      <img src="https://img.youtube.com/vi/kskBxy_2tTk/hqdefault.jpg">
-    </div>
-
-  </div>
-</section>
-
-<section class="section light" id="features">
-  <div class="container center">
-    <h2>Why DigiBillMate?</h2>
-
-    <div class="grid-4">
-      <div class="feature">📄 No Paper Waste</div>
-      <div class="feature">⚡ Instant Delivery</div>
-      <div class="feature">🔒 100% Secure</div>
-      <div class="feature">📈 Better Engagement</div>
-    </div>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="container cta-box">
-    <h2>Ready to Simplify Your Billing Process?</h2>
-    <a href="/app" class="btn primary">Get Started Free</a>
-  </div>
-</section>
-
-<section class="section" id="contact">
-  <div class="container center">
-    <h2>Contact</h2>
-    <p>📧 billmate.helper@gmail.com<br>📱 +91 70100 29710</p>
-  </div>
-</section>
-
-<footer>
-© 2026 DigiBillMate Technologies
-</footer>
-
-</body>
-</html>
+.footer-bottom {
+  text-align:center;
+  margin-top:20px;
+  opacity:0.6;
+}

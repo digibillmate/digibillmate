@@ -265,73 +265,115 @@ h2 {
 
 /* FEATURES SECTION */
 .features-section {
-  background: #eef2f7;
-  padding: 60px 0;
+  background: linear-gradient(180deg, #eef2f7, #f8faff);
+  padding: 70px 0;
 }
 
 /* TITLE */
 .features-title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 600;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
   position: relative;
 }
 
 .features-title::after {
   content: "";
-  width: 40px;
+  width: 50px;
   height: 3px;
   background: #2b6fff;
   display: block;
-  margin: 8px auto 0;
+  margin: 10px auto 0;
   border-radius: 2px;
 }
 
 /* GRID */
 .features-grid {
   display: grid;
-  grid-template-columns: repeat(4, 220px);
+  grid-template-columns: repeat(4, 240px);
   justify-content: center;
-  gap: 25px;
+  gap: 30px;
 }
 
 /* CARD */
 .feature-card {
-  background: #fff;
-  padding: 22px;
-  border-radius: 12px;
+  background: linear-gradient(145deg, #ffffff, #f1f5fb);
+  padding: 26px;
+  border-radius: 16px;
   border: 1px solid #e4e9f2;
   text-align: center;
-  transition: 0.2s;
+  transition: all 0.25s ease;
+  position: relative;
+  overflow: hidden;
 }
 
+/* HOVER MAGIC */
 .feature-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(43,111,255,0.15);
 }
 
-/* ICON */
+/* ICON BASE */
 .feature-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 12px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 22px;
-  margin-bottom: 10px;
 }
 
-/* ICON COLORS */
-.green { color: #2ecc71; }
-.yellow { color: #f1c40f; }
-.purple { color: #8e44ad; }
-.orange { color: #e67e22; }
+/* COLORED ICON BACKGROUNDS */
+.green {
+  background: rgba(46, 204, 113, 0.12);
+  color: #27ae60;
+}
+
+.yellow {
+  background: rgba(241, 196, 15, 0.15);
+  color: #f39c12;
+}
+
+.purple {
+  background: rgba(155, 89, 182, 0.15);
+  color: #8e44ad;
+}
+
+.orange {
+  background: rgba(230, 126, 34, 0.15);
+  color: #e67e22;
+}
 
 /* TEXT */
 .feature-card h3 {
-  font-size: 14px;
+  font-size: 15px;
   margin-bottom: 6px;
+  font-weight: 600;
 }
 
 .feature-card p {
-  font-size: 12px;
+  font-size: 12.5px;
   color: #666;
-  line-height: 1.4;
+  line-height: 1.5;
+}
+
+/* SUBTLE GLOW LINE ON HOVER */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: linear-gradient(90deg, #2b6fff, #4ea1ff);
+  opacity: 0;
+  transition: 0.25s;
+}
+
+.feature-card:hover::before {
+  opacity: 1;
 }
 
 /* CTA */

@@ -18,11 +18,11 @@
     <div class="nav-links">
       <a href="#products">Products</a>
       <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a> <!-- ADDED -->
       <a href="#demo">Demo</a>
       <a href="#contact">Contact</a>
     </div>
 
-    <!-- PRIMARY CTA -->
     <a href="/app" class="btn primary nav-btn">Get Started Free</a>
 
   </div>
@@ -32,6 +32,7 @@
 <section class="hero">
   <div class="container hero-grid">
 
+    <!-- LEFT -->
     <div class="hero-left">
       <span class="badge">Smart Billing. Stronger Business.</span>
 
@@ -45,11 +46,9 @@
         and business operations.
       </p>
 
-      <!-- CLEAN CTA -->
       <div class="buttons">
         <a href="/app" class="btn primary">Get Started Free</a>
-
-        <a href="#demo" class="btn secondary">Watch Demo</a>
+        <a href="#demo" class="btn outline">▶ Watch Demo</a>
       </div>
 
       <div class="meta">
@@ -57,10 +56,28 @@
       </div>
     </div>
 
+    <!-- RIGHT (UPDATED STRUCTURE) -->
     <div class="hero-right">
-      <div class="img-card">
+
+      <div class="hero-card">
+
         <img src="hero-image.png" class="hero-main">
+
+        <!-- FLOAT ICONS -->
+        <div class="hero-icon whatsapp">🟢</div>
+        <div class="hero-icon sms">💬</div>
+        <div class="hero-icon cloud">☁️</div>
+        <div class="hero-icon lock">🔒</div>
+
+        <!-- FEATURE PILLS -->
+        <div class="hero-features">
+          <div>⚡ Fast</div>
+          <div>📊 Accurate</div>
+          <div>👌 Easy</div>
+        </div>
+
       </div>
+
     </div>
 
   </div>
@@ -72,15 +89,21 @@
     <h2>Our Products</h2>
 
     <div class="grid">
-      <div class="card">
+
+      <div class="card product-card">
+        <div class="icon">📄</div>
         <h3>DigiBillMate</h3>
         <p>Convert paper bills into digital invoices via WhatsApp & SMS.</p>
+        <a href="#">Learn More →</a>
       </div>
 
-      <div class="card">
+      <div class="card product-card">
+        <div class="icon">👥</div>
         <h3>DigiBillMate CRM</h3>
         <p>Manage customers, service history, and workflows efficiently.</p>
+        <a href="#">Learn More →</a>
       </div>
+
     </div>
   </div>
 </section>
@@ -89,21 +112,19 @@
 <section class="section light" id="demo">
   <div class="container hero-grid">
 
-    <div>
+    <div class="demo-left">
       <h2>See DigiBillMate in Action</h2>
-      <p>Watch how bills are converted instantly and save time.</p>
+      <p>Watch how bills are converted instantly and businesses save time.</p>
 
       <a href="https://www.youtube.com/watch?v=kskBxy_2tTk"
-         target="_blank" class="btn secondary">
-        ▶ Watch Demo
+         target="_blank" class="btn outline">
+        ▶ Watch Demo Video
       </a>
     </div>
 
     <div class="video-card">
-      <a href="https://www.youtube.com/watch?v=kskBxy_2tTk" target="_blank">
-        <img src="https://img.youtube.com/vi/kskBxy_2tTk/hqdefault.jpg" class="video-thumb">
-        <div class="play-btn">▶</div>
-      </a>
+      <img src="https://img.youtube.com/vi/kskBxy_2tTk/hqdefault.jpg" class="video-thumb">
+      <div class="play-btn">▶</div>
     </div>
 
   </div>
@@ -112,10 +133,10 @@
 <!-- FEATURES -->
 <section class="section" id="features">
   <div class="container center">
-    <h2>Why DigiBillMate?</h2>
+    <h2>Why Choose DigiBillMate?</h2>
 
     <div class="grid-4">
-      <div class="feature">📄 No Paper Waste</div>
+      <div class="feature">🌿 No Paper Waste</div>
       <div class="feature">⚡ Instant Delivery</div>
       <div class="feature">🔒 100% Secure</div>
       <div class="feature">📈 Better Engagement</div>
@@ -123,82 +144,55 @@
   </div>
 </section>
 
-<!-- FOR WHOM -->
-<section class="section light">
-  <div class="container center">
-
-    <p class="section-tag">WHO IS DIGIBILLMATE FOR?</p>
-    <h2>Built for Every Business That Bills</h2>
-
-    <div class="business-grid">
-      <div class="business-card"><span>🛒</span><p>Retail Stores</p></div>
-      <div class="business-card"><span>🏪</span><p>Supermarkets</p></div>
-      <div class="business-card"><span>💊</span><p>Pharmacies</p></div>
-      <div class="business-card"><span>🍽️</span><p>Restaurants</p></div>
-      <div class="business-card"><span>🛠️</span><p>Service Centers</p></div>
-      <div class="business-card"><span>🏥</span><p>Clinics</p></div>
-      <div class="business-card"><span>⋯</span><p>And More</p></div>
-    </div>
-
-    <p class="business-note">
-      Especially suited for high-volume environments where speed and reliability matter.
-    </p>
-
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="section light">
-  <div class="container center">
-
-    <p class="section-tag">HOW IT WORKS</p>
-    <h2>Simple. Smart. Automated.</h2>
-
-    <div class="steps">
-      <div class="step"><div class="step-circle">1</div><h4>Bill Generated</h4><p>Bill created at counter</p></div>
-      <div class="step"><div class="step-circle">2</div><h4>Convert</h4><p>Auto digital invoice</p></div>
-      <div class="step"><div class="step-circle">3</div><h4>Secure Link</h4><p>Cloud link generated</p></div>
-      <div class="step"><div class="step-circle">4</div><h4>Delivery</h4><p>Sent via WhatsApp/SMS</p></div>
-      <div class="step"><div class="step-circle">5</div><h4>Done</h4><p>Track anytime</p></div>
-    </div>
-
-  </div>
-</section>
-
-<!-- CTA (FINAL CLEAN) -->
+<!-- CTA -->
 <section class="cta">
   <div class="container cta-box">
-    <h2>Ready to Simplify Your Billing?</h2>
 
-    <a href="/app" class="btn primary">Get Started Free</a>
+    <div class="cta-left">
+      👥 Ready to Simplify Your Billing Process?
+    </div>
+
+    <a href="/app" class="btn primary">Get Started Free →</a>
+
   </div>
 </section>
 
-<!-- CONTACT -->
-<section class="section" id="contact">
-  <div class="container center">
-    <h2>Contact</h2>
+<!-- FOOTER (UPDATED STRUCTURE) -->
+<footer class="footer">
+  <div class="container footer-grid">
 
-    <p>
-      📧 billmate.helper@gmail.com<br>
-      📱 +91 70100 29710
-    </p>
+    <div>
+      <h3>DigiBillMate</h3>
+      <p>Smart software solutions for modern billing businesses.</p>
+    </div>
+
+    <div>
+      <h4>Products</h4>
+      <p>DigiBillMate</p>
+      <p>CRM</p>
+    </div>
+
+    <div>
+      <h4>Quick Links</h4>
+      <p>Features</p>
+      <p>Pricing</p>
+      <p>Demo</p>
+      <p>Contact</p>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>support@digibillmate.com</p>
+      <p>+91 98765 43210</p>
+      <p>India</p>
+    </div>
+
   </div>
-</section>
 
-<footer>
-  © 2026 DigiBillMate Technologies
+  <div class="footer-bottom">
+    © 2025 DigiBillMate. All rights reserved.
+  </div>
 </footer>
 
 </body>
 </html>
-
-<script>
-const links = document.querySelectorAll('.nav-links a');
-links.forEach(link => {
-  link.addEventListener('click', () => {
-    links.forEach(l => l.classList.remove('active'));
-    link.classList.add('active');
-  });
-});
-</script>

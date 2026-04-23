@@ -141,12 +141,17 @@ h2 {
   gap: 30px;
 }
 
+#products {
+  background: #ffffff;
+}
+
 .product-card {
-  background: white;
+  background: #ffffff;
   padding: 25px;
   border-radius: 14px;
   text-align: left;
   transition: 0.2s;
+  border: 1px solid #eef1f6;
 }
 
 .product-card:hover {
@@ -176,19 +181,22 @@ h2 {
 }
 
 /* DEMO SECTION */
-.demo-left {
-  text-align: left;
+#demo .hero-grid {
+  align-items: center;
+  gap: 40px;
+}
+
+.video-card {
+  width: 380px;
 }
 
 .demo-left h2 {
-  font-size: 22px;
-  margin-bottom: 10px;
+  font-size: 20px;
+  margin-bottom: 8px;
 }
 
 .demo-left p {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 20px;
+  font-size: 13px;
 }
 
 /* VIDEO CARD */

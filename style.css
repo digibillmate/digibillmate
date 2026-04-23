@@ -291,19 +291,88 @@ h2 {
 
 /* FOOTER */
 .footer {
-  background: #0b2341;
+  background: linear-gradient(180deg, #0b2341, #081a30);
   color: #cfd6e4;
-  padding: 40px 0;
+  padding: 50px 0 20px;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+  gap: 40px;
+  align-items: start;
 }
 
+/* BRAND */
+.footer-brand h3 {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-brand p {
+  font-size: 13px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+/* SOCIAL ICONS */
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials span {
+  width: 32px;
+  height: 32px;
+  background: #132f55;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* HEADINGS */
+.footer h4 {
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+/* LINKS / TEXT */
+.footer p {
+  font-size: 13px;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+/* NEWSLETTER */
+.newsletter input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+  margin: 10px 0;
+  font-size: 13px;
+}
+
+.newsletter button {
+  width: 100%;
+  padding: 9px;
+  background: #2b6fff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* BOTTOM */
 .footer-bottom {
   text-align: center;
-  margin-top: 20px;
-  font-size: 13px;
+  margin-top: 30px;
+  font-size: 12px;
+  opacity: 0.7;
 }

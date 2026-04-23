@@ -186,9 +186,7 @@ h2 {
   gap: 40px;
 }
 
-.video-card {
-  width: 380px;
-}
+
 
 .demo-left h2 {
   font-size: 20px;
@@ -199,10 +197,10 @@ h2 {
   font-size: 13px;
 }
 
-/* VIDEO CARD */
+/* VIDEO CARD (CLEAN FIX) */
 .video-card {
   position: relative;
-  width: 420px;
+  width: 380px;
   justify-self: center;
 }
 
@@ -226,7 +224,6 @@ h2 {
   font-size: 20px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
-
 /* FEATURES */
 .grid-4 {
   display: grid;

@@ -1,233 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <title>DigiBillMate</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiBillMate - Smart Software Solutions</title>
+    <!-- Tailwind CSS Play CDN (For development/Cloudflare Pages) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background: radial-gradient(circle at top right, #1e3a8a, #1d4ed8, #172554); }
+    </style>
 </head>
+<body class="bg-gray-50 text-gray-900">
 
-<body>
+    <!-- NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">D</div>
+                    <span class="text-2xl font-bold tracking-tight text-blue-900">DigiBillMate</span>
+                </div>
+                
+                <div class="hidden md:flex space-x-8 font-medium text-gray-600">
+                    <a href="#products" class="hover:text-blue-600 transition">Products</a>
+                    <a href="#features" class="hover:text-blue-600 transition">Features</a>
+                    <a href="#pricing" class="hover:text-blue-600 transition">Pricing</a>
+                    <a href="#demo" class="hover:text-blue-600 transition">About Us</a>
+                </div>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-  <div class="container nav-flex">
+                <div class="flex gap-3">
+                    <a href="/app" class="hidden lg:block px-5 py-2.5 text-blue-600 font-semibold border border-blue-600 rounded-lg hover:bg-blue-50 transition">Request Demo</a>
+                    <a href="/app" class="px-5 py-2.5 bg-blue-600 text-white font-semibold rounded-lg shadow-lg shadow-blue-200 hover:bg-blue-700 transition">Download CRM</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <div class="logo-text">DigiBillMate</div>
+    <!-- HERO SECTION -->
+    <section class="hero-gradient text-white pt-16 pb-24 px-4 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <span class="inline-block px-4 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-sm font-semibold tracking-wide">
+                    🔵 Smart Billing. Stronger Business.
+                </span>
+                <h1 class="text-5xl lg:text-6xl font-bold leading-tight">
+                    Smart Software Solutions for <span class="text-blue-400">Modern Billing</span> Businesses
+                </h1>
+                <p class="text-lg text-blue-100 max-w-xl leading-relaxed">
+                    DigiBillMate Technologies builds powerful tools that simplify billing, customer communication, and business operations.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="/app" class="px-8 py-4 bg-white text-blue-900 font-bold rounded-xl flex items-center gap-2 hover:bg-blue-50 transition">
+                        <span>⬇</span> Download CRM for Windows
+                    </a>
+                    <a href="#demo" class="px-8 py-4 bg-white/10 border border-white/30 backdrop-blur-md font-bold rounded-xl hover:bg-white/20 transition">
+                        Use on Mobile
+                    </a>
+                </div>
+                <div class="flex gap-6 text-sm text-blue-200 font-medium">
+                    <span>✓ Windows, Android & iOS</span>
+                    <span>✓ Secure</span>
+                    <span>✓ Fast</span>
+                </div>
+            </div>
 
-    <div class="nav-links">
-      <a href="#products">Products</a>
-      <a href="#features">Features</a>
-      <a href="#pricing">Pricing</a> <!-- ADDED -->
-      <a href="#demo">Demo</a>
-      <a href="#contact">Contact</a>
-    </div>
+            <!-- Dashboard Graphic Mockup -->
+            <div class="relative">
+                <div class="bg-white/10 p-4 rounded-3xl border border-white/20 backdrop-blur-xl shadow-2xl">
+                    <img src="https://img.youtube.com/vi/kskBxy_2tTk/maxresdefault.jpg" alt="Interface" class="rounded-2xl shadow-inner">
+                    <!-- Floating Badge -->
+                    <div class="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl text-gray-900">
+                        <p class="text-xs font-bold text-gray-400 uppercase">Invoice Sent</p>
+                        <p class="text-xl font-bold">₹ 24,500</p>
+                        <p class="text-xs text-green-500 font-bold">● Successfully Delivered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <a href="/app" class="btn primary nav-btn">Download Desktop CRM</a>
-    <a href="/app" class="btn primary nav-btn">Download Mobile CRM</a>
+    <!-- PRODUCTS -->
+    <section id="products" class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto text-center space-y-4 mb-16">
+            <p class="text-blue-600 font-bold uppercase tracking-widest text-sm">Our Products</p>
+            <h2 class="text-4xl font-bold text-gray-900">Powerful Tools for Your Business</h2>
+        </div>
 
-  </div>
-</nav>
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+            <!-- Product 1 -->
+            <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:shadow-xl transition-all group">
+                <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6">📄</div>
+                <h3 class="text-2xl font-bold mb-4">DigiBillMate</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">A smart digital billing solution that converts paper bills to digital invoices and delivers them via WhatsApp or SMS.</p>
+                <a href="#" class="text-blue-600 font-bold flex items-center gap-2 group-hover:gap-4 transition-all">Learn More <span>→</span></a>
+            </div>
+            <!-- Product 2 -->
+            <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:shadow-xl transition-all group">
+                <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-6">👥</div>
+                <h3 class="text-2xl font-bold mb-4 text-gray-900">DigiBillMate CRM</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">A desktop application for managing customers, service history, and follow-ups built for service centers.</p>
+                <a href="#" class="text-purple-600 font-bold flex items-center gap-2 group-hover:gap-4 transition-all">Learn More <span>→</span></a>
+            </div>
+        </div>
+    </section>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-grid">
+    <!-- VIDEO DEMO -->
+    <section id="demo" class="py-24 px-4 bg-blue-50/50">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6">
+                <p class="text-blue-600 font-bold uppercase tracking-widest text-sm">See it in action</p>
+                <h2 class="text-4xl font-bold text-gray-900">How DigiBillMate Works — A <span class="text-blue-600">Quick Demo</span></h2>
+                <p class="text-lg text-gray-600">Watch a short walkthrough showing how DigiBillMate converts a paper bill into a secure WhatsApp-delivered digital invoice.</p>
+                <a href="https://www.youtube.com/watch?v=kskBxy_2tTk" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-200">
+                    <span>▶</span> Watch on YouTube
+                </a>
+            </div>
+            <div class="relative group cursor-pointer">
+                <div class="absolute inset-0 bg-blue-600/10 rounded-3xl group-hover:bg-transparent transition"></div>
+                <img src="https://img.youtube.com/vi/kskBxy_2tTk/maxresdefault.jpg" class="rounded-3xl shadow-2xl border-8 border-white" alt="Video Thumb">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center text-3xl shadow-2xl group-hover:scale-110 transition">▶</div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- LEFT -->
-    <div class="hero-left">
-      <span class="badge">Smart Billing. Stronger Business.</span>
+    <!-- FEATURES -->
+    <section id="features" class="py-24 px-4">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <p class="text-blue-600 font-bold uppercase tracking-widest text-sm mb-4 italic underline decoration-blue-200">What DigiBillMate Solves</p>
+            <h2 class="text-4xl font-bold text-gray-900">Eliminate Paper. Save Time. Delighted Customers.</h2>
+        </div>
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
+            <div class="text-center space-y-4">
+                <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto text-2xl border-4 border-white shadow-md">📄</div>
+                <h4 class="font-bold">No More Waste</h4>
+                <p class="text-sm text-gray-500">Go digital and reduce printing and courier costs.</p>
+            </div>
+            <div class="text-center space-y-4">
+                <div class="w-16 h-16 bg-green-50 text-green-600 rounded-full flex items-center justify-center mx-auto text-2xl border-4 border-white shadow-md">⚡</div>
+                <h4 class="font-bold">Instant Delivery</h4>
+                <p class="text-sm text-gray-500">Send invoices via WhatsApp or SMS in seconds.</p>
+            </div>
+            <div class="text-center space-y-4">
+                <div class="w-16 h-16 bg-purple-50 text-purple-600 rounded-full flex items-center justify-center mx-auto text-2xl border-4 border-white shadow-md">🛡</div>
+                <h4 class="font-bold">100% Secure</h4>
+                <p class="text-sm text-gray-500">Bank-grade security for your data and transactions.</p>
+            </div>
+            <div class="text-center space-y-4">
+                <div class="w-16 h-16 bg-orange-50 text-orange-600 rounded-full flex items-center justify-center mx-auto text-2xl border-4 border-white shadow-md">📈</div>
+                <h4 class="font-bold">Better Engagement</h4>
+                <p class="text-sm text-gray-500">Faster communication leads to better satisfaction.</p>
+            </div>
+        </div>
+    </section>
 
-      <h1>
-        Smart Software Solutions<br>
-        for <span>Modern Billing</span> Businesses
-      </h1>
+    <!-- FOOTER -->
+    <footer class="bg-blue-900 text-white pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-12 border-b border-blue-800 pb-12 mb-10">
+            <div class="space-y-4">
+                <h3 class="text-2xl font-bold">DigiBillMate</h3>
+                <p class="text-blue-200">Smart software solutions for modern billing businesses.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Quick Links</h4>
+                <ul class="space-y-3 text-blue-200">
+                    <li><a href="#" class="hover:text-white transition">Products</a></li>
+                    <li><a href="#" class="hover:text-white transition">Pricing</a></li>
+                    <li><a href="#" class="hover:text-white transition">Demo</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Contact</h4>
+                <ul class="space-y-3 text-blue-200 text-sm">
+                    <li>support@digibillmate.com</li>
+                    <li>+91 98765 43210</li>
+                    <li>India</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Newsletter</h4>
+                <div class="flex">
+                    <input type="email" placeholder="Email" class="bg-blue-800 border-none rounded-l-lg px-4 py-2 w-full outline-none focus:ring-2 ring-blue-500">
+                    <button class="bg-blue-600 px-4 py-2 rounded-r-lg font-bold">Go</button>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-blue-400 text-sm">
+            © 2026 DigiBillMate. All rights reserved.
+        </div>
+    </footer>
 
-      <p>
-        DigiBillMate simplifies billing, customer communication,
-        and business operations.
-      </p>
-
-      <div class="buttons">
-        <a href="/app" class="btn primary">Get Started Free</a>
-        <a href="#demo" class="btn outline">▶ Watch Demo</a>
-      </div>
-
-      <div class="meta">
-        ✔ Works on All Devices ✔ Secure ✔ Fast ✔ No Paper Waste
-      </div>
-    </div>
-
-    <!-- RIGHT (UPDATED STRUCTURE) -->
-    <div class="hero-right">
-
-      <div class="hero-card">
-
-        <img src="hero-image.png" class="hero-main">
-
-          </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- PRODUCTS -->
-<section class="section" id="products">
-  <div class="container center">
-    <h2>Our Products</h2>
-
-    <div class="products-grid">
-
-      <div class="card product-card">
-        <div class="icon">📄</div>
-        <h3>DigiBillMate</h3>
-        <p>Convert paper bills into digital invoices via WhatsApp & SMS.</p>
-        <a href="#">Learn More →</a>
-      </div>
-
-      <div class="card product-card">
-        <div class="icon">👥</div>
-        <h3>DigiBillMate CRM</h3>
-        <p>Manage customers, service history, and workflows efficiently.</p>
-        <a href="#">Learn More →</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-  <section class="demo-section" id="demo">
-  <div class="container demo-wrapper">
-
-    <!-- LEFT -->
-    <div class="demo-content">
-      <h2>See DigiBillMate in Action</h2>
-
-      <p>
-        Watch how bills are converted instantly and businesses save time and effort.
-      </p>
-
-      <div class="demo-actions">
-        <a href="https://www.youtube.com/watch?v=kskBxy_2tTk"
-           target="_blank" class="btn primary">
-          ▶ Watch Demo Video
-        </a>
-      </div>
-    </div>
-
-    <!-- RIGHT -->
-    <div class="demo-video">
-      <img src="https://img.youtube.com/vi/kskBxy_2tTk/maxresdefault.jpg">
-
-      <div class="play-btn">▶</div>
-    </div>
-
-  </div>
-</section>
-<!-- FEATURES -->
-<section class="features-section" id="features">
-  <div class="container center">
-
-    <h2 class="features-title">Why Choose DigiBillMate?</h2>
-
-    <div class="features-grid">
-
-      <div class="feature-card">
-        <div class="feature-icon green">🌿</div>
-        <h3>No Paper Waste</h3>
-        <p>Go digital, save trees and the environment.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon yellow">⚡</div>
-        <h3>Instant Delivery</h3>
-        <p>Deliver invoices instantly via WhatsApp & SMS.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon purple">🛡</div>
-        <h3>100% Secure</h3>
-        <p>Your data is encrypted and fully protected.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon orange">📈</div>
-        <h3>Better Engagement</h3>
-        <p>Improve customer trust and communication.</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-<!-- CTA -->
-<section class="cta">
-  <div class="container cta-box">
-
-    <div class="cta-left">
-      👥 Ready to Simplify Your Billing Process?
-    </div>
-
-    <a href="/app" class="btn primary">Get Started Free →</a>
-
-  </div>
-</section>
-<div style="height:40px;background:#eef2f7;"></div>
-<!-- FOOTER -->
-<footer class="footer">
-  <div class="container footer-grid">
-
-    <!-- COL 1 -->
-    <div class="footer-brand">
-      <h3>DigiBillMate</h3>
-      <p>Smart software solutions for modern billing businesses.</p>
-
-      <div class="socials">
-        <span>f</span>
-        <span>in</span>
-        <span>x</span>
-      </div>
-    </div>
-
-    <!-- COL 2 -->
-    <div>
-      <h4>Products</h4>
-      <p>DigiBillMate</p>
-      <p>CRM</p>
-    </div>
-
-    <!-- COL 3 -->
-    <div>
-      <h4>Quick Links</h4>
-      <p>Features</p>
-      <p>Pricing</p>
-      <p>Demo</p>
-      <p>Contact</p>
-    </div>
-
-    <!-- COL 4 -->
-    <div>
-      <h4>Contact Us</h4>
-      <p>support@digibillmate.com</p>
-      <p>+91 98765 43210</p>
-      <p>India</p>
-    </div>
-
-    <!-- COL 5 -->
-    <div class="newsletter">
-      <h4>Newsletter</h4>
-      <p>Subscribe for updates.</p>
-
-      <input type="email" placeholder="Enter your email">
-      <button>Subscribe</button>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2025 DigiBillMate. All rights reserved.
-  </div>
-</footer>
 </body>
 </html>

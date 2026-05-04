@@ -16,24 +16,29 @@
 <body class="bg-gray-50 text-gray-900">
 
     <!-- NAVBAR -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
                 <div class="flex items-center gap-2">
                     <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-blue-200">D</div>
-                    <span class="text-2xl font-bold tracking-tight text-blue-900 uppercase">DigiBillMate</span>
+                    <span class="text-2xl font-bold tracking-tight text-blue-900">DigiBillMate</span>
                 </div>
                 
-                <div class="hidden md:flex space-x-8 font-medium text-gray-600">
+                <!-- Nav Links from Old Code -->
+                <div class="hidden lg:flex space-x-6 font-medium text-gray-600 text-sm">
                     <a href="#products" class="hover:text-blue-600 transition">Products</a>
                     <a href="#features" class="hover:text-blue-600 transition">Features</a>
                     <a href="#industries" class="hover:text-blue-600 transition">Industries</a>
+                    <a href="#pricing" class="hover:text-blue-600 transition">Pricing</a>
                     <a href="#demo" class="hover:text-blue-600 transition">About Us</a>
+                    <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
                 </div>
 
+                <!-- Action Buttons -->
                 <div class="flex gap-3">
-                    <a href="/app" class="hidden lg:block px-5 py-2.5 text-blue-600 font-semibold border border-blue-600 rounded-lg hover:bg-blue-50 transition">Request Demo</a>
-                    <a href="/app" class="px-5 py-2.5 bg-blue-600 text-white font-semibold rounded-lg shadow-lg shadow-blue-200 hover:bg-blue-700 transition">Download CRM</a>
+                    <a href="/app" class="hidden xl:block px-4 py-2 text-blue-600 font-semibold border border-blue-600 rounded-lg hover:bg-blue-50 transition text-sm">Request Demo</a>
+                    <a href="/app" class="px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition text-sm text-center">Download CRM</a>
                 </div>
             </div>
         </div>
@@ -53,107 +58,149 @@
                     DigiBillMate Technologies builds powerful tools that simplify billing, customer communication, and business operations.
                 </p>
                 <div class="flex flex-wrap gap-4">
-                    <a href="/app" class="px-8 py-4 bg-white text-blue-900 font-bold rounded-xl flex items-center gap-2 hover:shadow-xl transition">
+                    <a href="/app" class="px-8 py-4 bg-blue-600 text-white font-bold rounded-xl flex items-center gap-2 hover:bg-blue-700 transition shadow-lg">
                         <span>⬇</span> Download CRM for Windows
                     </a>
-                    <a href="#demo" class="px-8 py-4 bg-white/10 border border-white/30 backdrop-blur-md font-bold rounded-xl hover:bg-white/20 transition">
-                        Use on Mobile
+                    <a href="/app" class="px-8 py-4 bg-white text-blue-900 font-bold rounded-xl hover:bg-blue-50 transition flex items-center gap-2">
+                        Get Started Free
                     </a>
+                    <a href="#demo" class="px-8 py-4 bg-white/10 border border-white/30 backdrop-blur-md font-bold rounded-xl hover:bg-white/20 transition">
+                        ▶ Watch Demo
+                    </a>
+                </div>
+                <div class="flex gap-6 text-sm text-blue-200 font-medium">
+                    <span>✔ Works on All Devices</span>
+                    <span>✔ Secure</span>
+                    <span>✔ Fast</span>
+                    <span>✔ No Paper Waste</span>
                 </div>
             </div>
 
-            <div class="relative">
-                <div class="bg-white/10 p-4 rounded-3xl border border-white/20 backdrop-blur-xl shadow-2xl">
-                    <img src="https://img.youtube.com/vi/kskBxy_2tTk/maxresdefault.jpg" alt="Interface" class="rounded-2xl opacity-90">
-                    <div class="absolute -top-6 -right-6 bg-white p-4 rounded-2xl shadow-xl text-gray-900 border border-gray-100">
-                        <p class="text-[10px] font-bold text-gray-400 uppercase tracking-tighter">Invoice Sent</p>
+            <!-- Right Side: Graphic with Floating Icons (Matching unnamed.jpg) -->
+            <div class="relative flex justify-center lg:justify-end">
+                <div class="relative w-full max-w-md">
+                    <!-- Main Dashboard Card -->
+                    <div class="bg-white/10 p-4 rounded-3xl border border-white/20 backdrop-blur-xl shadow-2xl">
+                        <img src="https://img.youtube.com/vi/kskBxy_2tTk/maxresdefault.jpg" alt="Interface" class="rounded-2xl shadow-inner border border-white/10">
+                    </div>
+                    
+                    <!-- Floating Feature Circles -->
+                    <div class="absolute -top-10 -left-10 w-20 h-20 bg-green-500 rounded-full flex flex-col items-center justify-center shadow-xl border-4 border-white/20 scale-90">
+                        <span class="text-2xl">💬</span>
+                        <span class="text-[8px] font-bold uppercase">WhatsApp</span>
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 w-20 h-20 bg-purple-500 rounded-full flex flex-col items-center justify-center shadow-xl border-4 border-white/20 scale-90">
+                        <span class="text-2xl">☁️</span>
+                        <span class="text-[8px] font-bold uppercase">Backup</span>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-20 h-20 bg-yellow-500 rounded-full flex flex-col items-center justify-center shadow-xl border-4 border-white/20 scale-90">
+                        <span class="text-2xl">🔒</span>
+                        <span class="text-[8px] font-bold uppercase">Secure</span>
+                    </div>
+
+                    <!-- Floating Invoice Badge -->
+                    <div class="absolute top-1/2 -right-12 bg-white p-4 rounded-2xl shadow-2xl text-gray-900 transform -translate-y-1/2 hidden md:block">
+                        <p class="text-[10px] font-bold text-gray-400 uppercase">Invoice Sent</p>
                         <p class="text-xl font-bold">₹ 24,500</p>
-                        <p class="text-[10px] text-green-500 font-bold flex items-center gap-1">
-                            <span class="w-2 h-2 bg-green-500 rounded-full"></span> Successfully Delivered
-                        </p>
+                        <p class="text-[10px] text-green-500 font-bold flex items-center gap-1">● Delivered</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WHO IS IT FOR? (NEW) -->
-    <section id="industries" class="py-24 px-4 bg-white">
-        <div class="max-w-7xl mx-auto text-center mb-16">
-            <p class="text-blue-600 font-bold uppercase tracking-widest text-xs mb-3">Who is DigiBillMate for?</p>
-            <h2 class="text-4xl font-bold text-gray-900 mb-6">Built for Every Business That Bills</h2>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-                <!-- Items -->
-                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition text-center">
-                    <div class="text-3xl mb-2 text-blue-600 text-center flex justify-center">🛒</div>
-                    <p class="text-xs font-bold text-gray-700">Retail Stores</p>
-                </div>
-                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition text-center">
-                    <div class="text-3xl mb-2 text-blue-600 text-center flex justify-center">🏬</div>
-                    <p class="text-xs font-bold text-gray-700">Supermarkets</p>
-                </div>
-                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition text-center">
-                    <div class="text-3xl mb-2 text-blue-600 text-center flex justify-center">💊</div>
-                    <p class="text-xs font-bold text-gray-700">Pharmacies</p>
-                </div>
-                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition text-center">
-                    <div class="text-3xl mb-2 text-blue-600 text-center flex justify-center">🍽️</div>
-                    <p class="text-xs font-bold text-gray-700">Restaurants</p>
-                </div>
-                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition text-center">
-                    <div class="text-3xl mb-2 text-blue-600 text-center flex justify-center">🔧</div>
-                    <p class="text-xs font-bold text-gray-700">Service Centers</p>
-                </div>
-                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition text-center">
-                    <div class="text-3xl mb-2 text-blue-600 text-center flex justify-center">🏥</div>
-                    <p class="text-xs font-bold text-gray-700">Clinics</p>
-                </div>
-                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition text-center">
-                    <div class="text-3xl mb-2 text-blue-600 text-center flex justify-center">•••</div>
-                    <p class="text-xs font-bold text-gray-700">And More</p>
-                </div>
+    <!-- PRODUCTS -->
+    <section id="products" class="py-24 px-4 bg-white">
+        <div class="max-w-7xl mx-auto text-center space-y-4 mb-16">
+            <p class="text-blue-600 font-bold uppercase tracking-widest text-xs">Our Products</p>
+            <h2 class="text-4xl font-bold text-gray-900">Powerful Tools for Your Business</h2>
+        </div>
+
+        <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+            <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:shadow-xl transition-all group">
+                <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-3xl mb-6">📄</div>
+                <h3 class="text-2xl font-bold mb-4">DigiBillMate</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">A smart digital billing solution that converts paper bills to digital invoices and delivers them via WhatsApp or SMS.</p>
+                <a href="#" class="text-blue-600 font-bold flex items-center gap-2 group-hover:gap-4 transition-all">Learn More <span>→</span></a>
             </div>
-            <p class="mt-10 text-gray-500 italic text-sm">Especially suited for high-volume environments where speed, reliability, and zero disruption matter.</p>
+            <div class="p-8 bg-gray-50 rounded-3xl border border-gray-100 hover:shadow-xl transition-all group text-gray-900">
+                <div class="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-3xl mb-6 text-gray-900">👥</div>
+                <h3 class="text-2xl font-bold mb-4">DigiBillMate CRM</h3>
+                <p class="text-gray-600 mb-6 leading-relaxed">A desktop application for managing customers, service history, and follow-ups built for service centers.</p>
+                <a href="#" class="text-purple-600 font-bold flex items-center gap-2 group-hover:gap-4 transition-all">Learn More <span>→</span></a>
+            </div>
         </div>
     </section>
 
-    <!-- HOW IT WORKS (NEW) -->
+    <!-- WHO IS IT FOR? (Industry Grid) -->
+    <section id="industries" class="py-24 px-4 bg-white border-t border-gray-50">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <p class="text-blue-600 font-bold uppercase tracking-widest text-[10px] mb-3">Who is DigiBillMate for?</p>
+            <h2 class="text-4xl font-bold text-gray-900 mb-6 tracking-tight">Built for Every Business That Bills</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:border-blue-200 transition text-center">
+                    <div class="text-3xl mb-2 flex justify-center">🛒</div>
+                    <p class="text-[10px] font-bold text-gray-700 uppercase tracking-tight">Retail Stores</p>
+                </div>
+                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:border-blue-200 transition text-center text-gray-900">
+                    <div class="text-3xl mb-2 flex justify-center">🏬</div>
+                    <p class="text-[10px] font-bold text-gray-700 uppercase tracking-tight">Supermarkets</p>
+                </div>
+                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:border-blue-200 transition text-center">
+                    <div class="text-3xl mb-2 flex justify-center">💊</div>
+                    <p class="text-[10px] font-bold text-gray-700 uppercase tracking-tight">Pharmacies</p>
+                </div>
+                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:border-blue-200 transition text-center text-gray-900">
+                    <div class="text-3xl mb-2 flex justify-center">🍽️</div>
+                    <p class="text-[10px] font-bold text-gray-700 uppercase tracking-tight">Restaurants</p>
+                </div>
+                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:border-blue-200 transition text-center">
+                    <div class="text-3xl mb-2 flex justify-center">🔧</div>
+                    <p class="text-[10px] font-bold text-gray-700 uppercase tracking-tight">Service Centers</p>
+                </div>
+                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:border-blue-200 transition text-center">
+                    <div class="text-3xl mb-2 flex justify-center">🏥</div>
+                    <p class="text-[10px] font-bold text-gray-700 uppercase tracking-tight">Clinics</p>
+                </div>
+                <div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:border-blue-200 transition text-center">
+                    <div class="text-3xl mb-2 flex justify-center">•••</div>
+                    <p class="text-[10px] font-bold text-gray-700 uppercase tracking-tight">And More</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
     <section class="py-24 px-4 bg-gray-50/50">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-20">
-                <p class="text-blue-600 font-bold uppercase tracking-widest text-xs mb-3">How it works (Billing Automation)</p>
+                <p class="text-blue-600 font-bold uppercase tracking-widest text-[10px] mb-3">How it works (Billing Automation)</p>
                 <h2 class="text-4xl font-bold text-gray-900">Simple. Smart. Automated.</h2>
             </div>
-
-            <div class="relative grid md:grid-cols-5 gap-8">
-                <!-- Step 1 -->
-                <div class="relative text-center group">
-                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-sm border-4 border-white shadow-sm relative z-10 group-hover:bg-blue-600 group-hover:text-white transition">1</div>
+            <div class="grid md:grid-cols-5 gap-8">
+                <div class="text-center">
+                    <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 font-bold shadow-lg">1</div>
                     <h4 class="font-bold mb-2">Bill is Generated</h4>
-                    <p class="text-xs text-gray-500">DigiBillMate detects each bill the moment it is generated.</p>
+                    <p class="text-xs text-gray-500">Detects each bill the moment it is generated.</p>
                 </div>
-                <!-- Step 2 -->
-                <div class="relative text-center group">
-                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-sm border-4 border-white shadow-sm relative z-10 group-hover:bg-blue-600 group-hover:text-white transition">2</div>
+                <div class="text-center">
+                    <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 font-bold shadow-lg">2</div>
                     <h4 class="font-bold mb-2">Convert to Digital</h4>
-                    <p class="text-xs text-gray-500">The bill is converted into a secure digital copy automatically.</p>
+                    <p class="text-xs text-gray-500">Converted into a secure digital copy automatically.</p>
                 </div>
-                <!-- Step 3 -->
-                <div class="relative text-center group">
-                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-sm border-4 border-white shadow-sm relative z-10 group-hover:bg-blue-600 group-hover:text-white transition">3</div>
-                    <h4 class="font-bold mb-2">Create Secure Link</h4>
-                    <p class="text-xs text-gray-500">A fast-access cloud link is created for safe delivery.</p>
+                <div class="text-center">
+                    <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 font-bold shadow-lg">3</div>
+                    <h4 class="font-bold mb-2">Create Link</h4>
+                    <p class="text-xs text-gray-500">Fast-access cloud link is created for safe delivery.</p>
                 </div>
-                <!-- Step 4 -->
-                <div class="relative text-center group">
-                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-sm border-4 border-white shadow-sm relative z-10 group-hover:bg-blue-600 group-hover:text-white transition">4</div>
+                <div class="text-center">
+                    <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 font-bold shadow-lg">4</div>
                     <h4 class="font-bold mb-2">Auto Delivery</h4>
-                    <p class="text-xs text-gray-500">Automatically delivered via WhatsApp or SMS to your customer.</p>
+                    <p class="text-xs text-gray-500">Delivered via WhatsApp or SMS to your customer.</p>
                 </div>
-                <!-- Step 5 -->
-                <div class="relative text-center group">
-                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 font-bold text-sm border-4 border-white shadow-sm relative z-10 group-hover:bg-blue-600 group-hover:text-white transition">5</div>
+                <div class="text-center">
+                    <div class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-6 font-bold shadow-lg">5</div>
                     <h4 class="font-bold mb-2">All Done!</h4>
                     <p class="text-xs text-gray-500">Track delivery, view history, and improve collections.</p>
                 </div>
@@ -161,33 +208,38 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="bg-blue-900 text-white pt-20 pb-10">
+    <!-- FOOTER (Integrated with old Contact Data) -->
+    <footer id="contact" class="bg-blue-900 text-white pt-20 pb-10">
         <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-12 border-b border-blue-800 pb-12 mb-10 text-sm">
             <div class="space-y-4">
                 <h3 class="text-xl font-bold uppercase tracking-tight">DigiBillMate</h3>
                 <p class="text-blue-200">Smart software solutions for modern billing businesses.</p>
+                <div class="flex gap-4">
+                    <span class="hover:text-blue-400 cursor-pointer">FB</span>
+                    <span class="hover:text-blue-400 cursor-pointer">LN</span>
+                    <span class="hover:text-blue-400 cursor-pointer">X</span>
+                </div>
             </div>
             <div>
-                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-blue-400">Quick Links</h4>
+                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-blue-400">Products</h4>
                 <ul class="space-y-3 text-blue-100">
-                    <li><a href="#products" class="hover:text-white">Products</a></li>
-                    <li><a href="#features" class="hover:text-white">Features</a></li>
-                    <li><a href="#demo" class="hover:text-white">About Us</a></li>
+                    <li>DigiBillMate</li>
+                    <li>DigiBillMate CRM</li>
                 </ul>
             </div>
             <div>
-                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-blue-400">Contact</h4>
+                <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-blue-400">Contact Us</h4>
                 <ul class="space-y-3 text-blue-100">
-                    <li>support@digibillmate.com</li>
-                    <li>India</li>
+                    <li>📧 support@digibillmate.com</li>
+                    <li>📞 +91 98765 43210</li>
+                    <li>📍 India</li>
                 </ul>
             </div>
             <div>
                 <h4 class="font-bold mb-6 uppercase text-xs tracking-widest text-blue-400">Newsletter</h4>
                 <div class="flex">
-                    <input type="email" placeholder="Email Address" class="bg-blue-800 border-none rounded-l-lg px-4 py-2 w-full outline-none">
-                    <button class="bg-blue-600 px-4 py-2 rounded-r-lg font-bold">Go</button>
+                    <input type="email" placeholder="Enter email" class="bg-blue-800 border-none rounded-l-lg px-4 py-2 w-full outline-none focus:ring-1 ring-blue-400">
+                    <button class="bg-blue-600 px-4 py-2 rounded-r-lg font-bold hover:bg-blue-500 transition">Subscribe</button>
                 </div>
             </div>
         </div>

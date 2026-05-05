@@ -522,6 +522,9 @@
   font-size: 0.75rem;
   color: #9aa7bd;
 }
+.solve-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
   /* FOOTER */
   footer { background: #071530; color: #4a6a9e; text-align: center; padding: 26px 6%; font-size: 0.84rem; }
   footer em { color: var(--cyan); font-style: normal; }
@@ -535,6 +538,9 @@
     .steps-row { flex-direction: column; align-items: center; gap: 28px; }
     .step:not(:last-child)::after { display: none; }
     .cta-bar { flex-direction: column; text-align: center; }
+      .solve-grid {
+    grid-template-columns: 1fr;
+
   }
 </style>
 </head>

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DigiBillMate – Smart Billing Software</title>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
@@ -501,6 +502,37 @@
 .cf-input button:hover {
   background: #155ed4;
 }
+
+.cf-social {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Brand Colors */
+.social.fb { background: #1877f2; }
+.social.ig { background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af); }
+.social.tw { background: #1da1f2; }
+
+/* Hover effect */
+.social:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
 @media(max-width: 768px) {
   .cf-container {
     flex-direction: column;
@@ -933,14 +965,23 @@
       <p>India</p>
     </div>
 
-    <!-- SUBSCRIBE -->
-    <div class="cf-col">
-      <h4>STAY UPDATED</h4>
-      <div class="cf-input">
-        <input type="email" placeholder="Email Address">
-        <button>Go</button>
-      </div>
-    </div>
+   <div class="cf-col">
+  <h4>STAY CONNECTED</h4>
+
+  <div class="cf-social">
+    <a href="https://facebook.com/yourpage" target="_blank" class="social fb">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://instagram.com/yourpage" target="_blank" class="social ig">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://twitter.com/yourpage" target="_blank" class="social tw">
+      <i class="fab fa-twitter"></i>
+    </a>
+  </div>
+</div>
 
   </div>
 

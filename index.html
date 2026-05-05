@@ -307,6 +307,64 @@
   }
   .ci { background: rgba(255,255,255,0.12); border-radius: 7px; padding: 3px 6px; font-size: 13px; }
 
+/* CONTACT */
+.sec-contact {
+  background: #f4f7fd;
+  padding: 70px 6%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-box {
+  background: #fff;
+  border-radius: 18px;
+  padding: 40px 30px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+}
+
+.contact-box h2 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.contact-text {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.c-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.c-item a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.c-item a:hover {
+  text-decoration: underline;
+}
+
   @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -366,6 +424,7 @@
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
         Request Demo
       </a>
+
     </div>
     <div class="hero-trust">
       <span class="trust-item"><span class="ck">✓</span> Works on Windows, Android &amp; iOS</span>
@@ -551,6 +610,31 @@
       <div class="snum">5</div>
       <h4>All Done!</h4>
       <p>Track delivery, view history, and improve collections.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section class="sec-contact" id="contact">
+  <div class="contact-box">
+    <span class="stag">✉ GET IN TOUCH</span>
+    <h2>Contact Us</h2>
+
+    <p class="contact-text">
+      We'd love to help you get started with DigiBillMate.<br>
+      Reach out for demo, setup, or partnerships.
+    </p>
+
+    <div class="contact-info">
+      <div class="c-item">
+        <span>📧</span>
+        <a href="mailto:billmate.helper@gmail.com">billmate.helper@gmail.com</a>
+      </div>
+
+      <div class="c-item">
+        <span>📱</span>
+        <a href="tel:+917010029710">+91 70100 29710</a>
+      </div>
     </div>
   </div>
 </section>

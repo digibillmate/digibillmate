@@ -307,72 +307,103 @@
   }
   .ci { background: rgba(255,255,255,0.12); border-radius: 7px; padding: 3px 6px; font-size: 13px; }
 
-/* CONTACT */
-.sec-contact {
+/* CONTACT FOOTER STYLE */
+.sec-contact-footer {
   background: #f4f7fd;
-  padding: 70px 6%;
+  padding: 60px 6% 20px;
+}
+
+.cf-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-.contact-box {
-  background: #fff;
-  border-radius: 18px;
-  padding: 40px 30px;
-  text-align: center;
-  max-width: 500px;
-  width: 100%;
-  border: 1px solid var(--border);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+/* Columns */
+.cf-col {
+  flex: 1;
+  min-width: 180px;
 }
 
-.contact-box h2 {
+/* Logo */
+.cf-logo {
   font-family: 'Nunito', sans-serif;
   font-weight: 900;
-  font-size: 1.8rem;
-  color: var(--navy);
+  font-size: 1.3rem;
+  color: var(--blue);
   margin-bottom: 10px;
 }
 
-.contact-text {
+.cf-desc {
+  font-size: 0.85rem;
   color: var(--muted);
-  font-size: 0.9rem;
   line-height: 1.6;
-  margin-bottom: 25px;
 }
 
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* Headings */
+.cf-col h4 {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: #6b7a99;
+  margin-bottom: 12px;
 }
 
-.c-item {
+/* Text */
+.cf-col p {
+  font-size: 0.85rem;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+/* Input */
+.cf-input {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 0.95rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.cf-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 0.85rem;
+}
+
+.cf-input button {
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  padding: 0 16px;
   font-weight: 600;
+  cursor: pointer;
 }
 
-.c-item a {
-  text-decoration: none;
-  color: var(--blue);
+.cf-input button:hover {
+  background: #155ed4;
 }
+@media(max-width: 768px) {
+  .cf-container {
+    flex-direction: column;
+    gap: 25px;
+  }
 
-.c-item a:hover {
-  text-decoration: underline;
+  .cf-col {
+    text-align: center;
+  }
+
+  .cf-input {
+    justify-content: center;
+  }
 }
-
-  @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
-}
-
-.fi {
-  animation: float 4s ease-in-out infinite;
+/* Bottom */
+.cf-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.75rem;
+  color: #9aa7bd;
 }
   /* FOOTER */
   footer { background: #071530; color: #4a6a9e; text-align: center; padding: 26px 6%; font-size: 0.84rem; }
@@ -614,30 +645,7 @@
   </div>
 </section>
 
-<!-- ═══ CONTACT ═══ -->
-<section class="sec-contact" id="contact">
-  <div class="contact-box">
-    <span class="stag">✉ GET IN TOUCH</span>
-    <h2>Contact Us</h2>
 
-    <p class="contact-text">
-      We'd love to help you get started with DigiBillMate.<br>
-      Reach out for demo, setup, or partnerships.
-    </p>
-
-    <div class="contact-info">
-      <div class="c-item">
-        <span>📧</span>
-        <a href="mailto:billmate.helper@gmail.com">billmate.helper@gmail.com</a>
-      </div>
-
-      <div class="c-item">
-        <span>📱</span>
-        <a href="tel:+917010029710">+91 70100 29710</a>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ═══ CTA BANNER ═══ -->
 <div class="cta-bar">
@@ -659,6 +667,48 @@
   </div>
 </div>
 
+<!-- ═══ CONTACT / FOOTER STYLE ═══ -->
+<section class="sec-contact-footer">
+  <div class="cf-container">
+
+    <!-- LEFT -->
+    <div class="cf-col">
+      <h3 class="cf-logo">DigiBillMate</h3>
+      <p class="cf-desc">
+        Smart software solutions for modern billing businesses.
+      </p>
+    </div>
+
+    <!-- PRODUCTS -->
+    <div class="cf-col">
+      <h4>PRODUCTS</h4>
+      <p>DigiBillMate</p>
+      <p>DigiBillMate CRM</p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="cf-col">
+      <h4>CONTACT</h4>
+      <p>billmate.helper@gmail.com</p>
+      <p>+91 70100 29710</p>
+      <p>India</p>
+    </div>
+
+    <!-- SUBSCRIBE -->
+    <div class="cf-col">
+      <h4>STAY UPDATED</h4>
+      <div class="cf-input">
+        <input type="email" placeholder="Email Address">
+        <button>Go</button>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cf-bottom">
+    © 2026 DigiBillMate Technologies. All rights reserved.
+  </div>
+</section>
 <!-- FOOTER -->
 <footer>
   &copy; 2025 <em>DigiBillMate Technologies</em>. All rights reserved.

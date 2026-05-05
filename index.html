@@ -55,33 +55,28 @@
   .btn-outline { padding: 8px 17px; border: 1.5px solid var(--blue); border-radius: 8px; color: var(--blue); font-size: 0.87rem; font-weight: 600; background: transparent; cursor: pointer; text-decoration: none; }
   .btn-solid { padding: 8px 17px; border-radius: 8px; background: var(--blue); color: #fff; font-size: 0.87rem; font-weight: 600; border: none; cursor: pointer; text-decoration: none; }
   .btn-solid:hover { background: #155ed4; }
-
-  /* Slider Layout */
+/* Slider wrapper */
 .video-slider {
   position: relative;
-  width: 420px;
+  width: 360px;   /* 👈 controls size */
+  overflow: hidden;
 }
 
+/* Container */
 .vs-container {
   display: flex;
-  gap: 16px;
-  overflow-x: auto;
+  overflow-x: hidden; /* ❗ no free scroll */
   scroll-behavior: smooth;
 }
 
-.vs-container::-webkit-scrollbar {
-  display: none;
-}
-
-/* Video Card */
+/* Each video */
 .vthumb {
-  position: relative;
-  min-width: 260px;
-  height: 160px;
-  border-radius: 14px;
+  min-width: 100%;   /* 👈 ONLY ONE visible */
+  height: 200px;
+  border-radius: 16px;
   overflow: hidden;
   flex-shrink: 0;
-  cursor: pointer;
+  position: relative;
 }
 
 .vthumb img {
@@ -90,7 +85,7 @@
   object-fit: cover;
 }
 
-/* Play Button */
+/* Play button */
 .vplay {
   position: absolute;
   top: 50%;
@@ -98,22 +93,22 @@
   transform: translate(-50%, -50%);
   background: red;
   color: white;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 22px;
 }
 
-/* Arrow Buttons */
+/* Arrows */
 .vs-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   background: #1e3a8a;
-  color: #fff;
+  color: white;
   border: none;
   width: 36px;
   height: 36px;
@@ -122,8 +117,8 @@
   z-index: 2;
 }
 
-.vs-btn.left { left: -18px; }
-.vs-btn.right { right: -18px; }
+.vs-btn.left { left: -15px; }
+.vs-btn.right { right: -15px; }
 
 .vs-btn:hover {
   background: #155ed4;

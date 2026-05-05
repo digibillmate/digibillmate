@@ -56,6 +56,32 @@
   .btn-outline { padding: 8px 17px; border: 1.5px solid var(--blue); border-radius: 8px; color: var(--blue); font-size: 0.87rem; font-weight: 600; background: transparent; cursor: pointer; text-decoration: none; }
   .btn-solid { padding: 8px 17px; border-radius: 8px; background: var(--blue); color: #fff; font-size: 0.87rem; font-weight: 600; border: none; cursor: pointer; text-decoration: none; }
   .btn-solid:hover { background: #155ed4; }
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    padding: 12px 20px;
+    gap: 10px;
+  }
+
+  .nav-logo {
+    justify-content: center;
+  }
+
+  .nav-btns {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-outline,
+  .btn-solid {
+    flex: 1;
+    text-align: center;
+  }
+}
+
 /* Slider wrapper */
 .video-slider {
   position: relative;
@@ -540,13 +566,20 @@
   }
 
   .cf-col {
+    width:100%;
+    max-width: 320px;
     text-align: center;
+    margin-bottom: 20px;
   }
 
   .cf-input {
     justify-content: center;
   }
+  .cf-social {
+    justify-content: center;
+  }
 }
+
 /* Bottom */
 .cf-bottom {
   text-align: center;

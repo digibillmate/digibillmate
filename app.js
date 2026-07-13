@@ -131,6 +131,48 @@
     window.addEventListener("resize", () => { if (window.innerWidth > 840) closeMenu(); });
   }
 
+  const sectionLinks = Array.from(document.querySelectorAll('.primary-nav a[href^="#"]'));
+  const navigationSections = sectionLinks.map((link) => ({
+    link,
+    section: document.querySelector(link.getAttribute("href"))
+  })).filter((item) => item.section);
+  let navigationFramePending = false;
+
+  const markActiveSection = (activeLink) => {
+    sectionLinks.forEach((link) => {
+      const isActive = link === activeLink;
+      link.classList.toggle("active", isActive);
+      if (isActive) link.setAttribute("aria-current", "location");
+      else link.removeAttribute("aria-current");
+    });
+  };
+
+  const updateActiveNavigation = () => {
+    if (!navigationSections.length) return;
+    const marker = window.scrollY + Math.max(120, window.innerHeight * 0.3);
+    let current = navigationSections[0];
+    navigationSections.forEach((item) => {
+      if (item.section.offsetTop <= marker) current = item;
+    });
+    const pageBottom = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+    if (pageBottom) current = navigationSections[navigationSections.length - 1];
+    markActiveSection(current.link);
+  };
+
+  const scheduleNavigationUpdate = () => {
+    if (navigationFramePending) return;
+    navigationFramePending = true;
+    window.requestAnimationFrame(() => {
+      updateActiveNavigation();
+      navigationFramePending = false;
+    });
+  };
+
+  sectionLinks.forEach((link) => link.addEventListener("click", () => markActiveSection(link)));
+  window.addEventListener("scroll", scheduleNavigationUpdate, { passive: true });
+  window.addEventListener("resize", scheduleNavigationUpdate);
+  updateActiveNavigation();
+
   const form = document.getElementById("enquiry-form");
   if (form) {
     form.addEventListener("submit", (event) => {

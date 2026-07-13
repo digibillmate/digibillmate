@@ -173,14 +173,24 @@ section { position: relative; }
 
 .about { background: var(--surface); }
 .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 100px; align-items: center; }
-.about-visual { --about-right-edge: 50px; position: relative; min-height: 490px; }
-.about-logo-card { position: absolute; inset: 30px var(--about-right-edge) 60px 0; display: flex; flex-direction: column; justify-content: space-between; padding: 48px; border-radius: 28px; background: var(--ink); box-shadow: 0 30px 70px rgba(14,43,76,.18); overflow: hidden; }
-.about-logo-card::after { content: ""; position: absolute; right: -100px; bottom: -110px; width: 300px; height: 300px; border: 1px solid rgba(77,159,255,.23); border-radius: 50%; box-shadow: 0 0 0 60px rgba(77,159,255,.04), 0 0 0 120px rgba(77,159,255,.025); }
-.about-logo-card img { width: 190px; height: 120px; object-fit: contain; filter: drop-shadow(0 10px 25px rgba(24,104,222,.25)); }
-.about-logo-card p { position: relative; z-index: 1; margin: 0; color: white; font: 700 1.45rem/1.35 "Manrope", sans-serif; }
-.about-accent-card { position: absolute; right: var(--about-right-edge); bottom: 20px; z-index: 2; display: grid; width: 230px; padding: 22px; border: 1px solid var(--border); border-radius: 18px; background: white; box-shadow: var(--shadow); }
-.about-accent-card strong { color: var(--ink); font: 700 .98rem "Manrope", sans-serif; }
-.about-accent-card span { margin-top: 3px; color: var(--muted); font-size: .72rem; }
+.about-visual { --about-right-edge: 50px; position: relative; padding: 30px var(--about-right-edge) 30px 0; }
+.about-story-card { position: relative; z-index: 1; min-height: 520px; display: flex; flex-direction: column; padding: 38px; border-radius: 28px; color: white; background: var(--ink); box-shadow: 0 30px 70px rgba(14,43,76,.18); overflow: hidden; }
+.about-story-card::after { content: ""; position: absolute; right: -100px; bottom: -110px; width: 300px; height: 300px; border: 1px solid rgba(77,159,255,.23); border-radius: 50%; box-shadow: 0 0 0 60px rgba(77,159,255,.04), 0 0 0 120px rgba(77,159,255,.025); }
+.about-card-top { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.about-card-top img { width: 150px; height: 82px; object-fit: contain; filter: drop-shadow(0 10px 25px rgba(24,104,222,.25)); }
+.about-card-top > span { padding: 7px 11px; border: 1px solid rgba(125,190,255,.22); border-radius: 30px; color: #8bc9ff; background: rgba(43,126,220,.1); font-size: .62rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.about-card-copy { position: relative; z-index: 1; margin: 38px 0 32px; }
+.about-card-copy > p:first-child { margin: 0 0 10px; color: #69b8ff; font-size: .65rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.about-card-copy h3 { margin: 0; color: white; font: 750 clamp(1.5rem, 2.2vw, 1.9rem)/1.26 "Manrope", sans-serif; letter-spacing: -.035em; }
+.about-card-copy h3 span { color: #67b9ff; }
+.about-card-copy > p:last-child { max-width: 420px; margin: 16px 0 0; color: #9db2ca; font-size: .78rem; line-height: 1.7; }
+.about-process { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(3, 1fr); margin-top: auto; border: 1px solid rgba(151,191,235,.16); border-radius: 15px; background: rgba(255,255,255,.04); overflow: hidden; }
+.about-process > div { display: flex; align-items: center; gap: 9px; padding: 15px 12px; border-right: 1px solid rgba(151,191,235,.14); }
+.about-process > div:last-child { border-right: 0; }
+.about-process b { color: #4ca9fb; font-size: .58rem; }
+.about-process span { display: grid; line-height: 1.35; }
+.about-process strong { color: #eef6fd; font: 700 .68rem "Manrope", sans-serif; }
+.about-process small { margin-top: 2px; color: #708aa7; font-size: .57rem; }
 .about-dots { position: absolute; right: var(--about-right-edge); top: 0; width: 105px; height: 85px; opacity: .4; background-image: radial-gradient(var(--blue) 1.5px, transparent 1.5px); background-size: 13px 13px; }
 .about-copy > p:not(.eyebrow) { max-width: 640px; margin-top: 20px; }
 .values { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 28px; }
@@ -346,9 +356,17 @@ section { position: relative; }
   .product-industries { left: 23px; right: 23px; text-align: left; }
   .industry-grid { grid-template-columns: 1fr; }
   .customer-card h3 { min-height: 0; }
-  .about-visual { --about-right-edge: 25px; min-height: 420px; }
-  .about-logo-card { inset: 20px var(--about-right-edge) 55px 0; padding: 32px; }
-  .about-accent-card { width: 210px; }
+  .about-visual { --about-right-edge: 0px; padding: 20px 0; }
+  .about-story-card { min-height: 0; padding: 27px 23px; border-radius: 24px; }
+  .about-card-top img { width: 135px; height: 72px; }
+  .about-card-top > span { padding: 6px 9px; font-size: .55rem; }
+  .about-card-copy { margin: 30px 0 27px; }
+  .about-card-copy h3 { font-size: 1.55rem; }
+  .about-card-copy > p:last-child { font-size: .75rem; }
+  .about-process > div { gap: 6px; padding: 13px 7px; }
+  .about-process strong { font-size: .61rem; }
+  .about-process small { font-size: .52rem; }
+  .about-dots { right: 0; }
   .price-card.popular { transform: none; }
   .field-row { grid-template-columns: 1fr; gap: 0; }
   .contact-form { padding: 26px 20px; }
